@@ -11,7 +11,7 @@ function saveDataToFile() {
 
     function documentToString() {
         let fullDocumentString = '';
-        for(let i in fullDocument) {
+        for(i = 0; i < fullDocument.length; i++) {
             fullDocumentString = fullDocumentString + fullDocument[i];
         }
 
