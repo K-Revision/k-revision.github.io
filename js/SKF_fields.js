@@ -1,6 +1,7 @@
 let SKF_LIST = [];
 
 function SKF_fields() {
+    SKForTAKS = 1;
     SKF_LIST.push({
         id: 'salgsin1',
         name: 'omsaetning',

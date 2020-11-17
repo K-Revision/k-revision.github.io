@@ -9,16 +9,16 @@
     <script src="js/SKF_fields.js"></script>
     <script src="js/saveDataToFile.js"></script>
 
-
-
     <style>
         #block_container {
             display: flex;
         }
         #block {
-            padding-right: 30px;
+            padding-right: 40px;
         }
     </style>
+
+
 </head>
 <body>
     <h1>K-ReVision XBRL Generator</h1>
@@ -34,6 +34,18 @@
         <div id='block'>
             <button type="button" >TAKS XBRL</button>
         </div>
+
+        <div id='block'>
+            <button type="button" onclick="saveDataToFile();">Generér XBRL</button>
+        </div>
+
+        <div id='block'>
+            <button type="button" >Gem .json</button>
+        </div>
+
+        <div id='block'>
+            <button type="button" >Åbn .json</button>
+        </div>
     
     </div>
 
@@ -44,43 +56,33 @@
         <div id='block'>
             <p>Skrásetingarnr. / V-Tal</p>
             <br>
-            <textarea id="VATNumber" cols="20" rows="1"></textarea>
+            <textarea id="VATNumber" cols="20" rows="1">XXXXXX</textarea>
         </div>
 
         <div id='block'>
             <p>Startdato i år</p>
             <br>
-            <textarea id="firstDateThisYear" cols="20" rows="1"></textarea>
+            <textarea id="firstDateThisYear" cols="20" rows="1">2020-01-01</textarea>
         </div>
 
         <div id='block'>
             <p>Slutdato i år</p>
             <br>
-            <textarea id="lastDateThisYear" cols="20" rows="1"></textarea>
+            <textarea id="lastDateThisYear" cols="20" rows="1">2020-31-12</textarea>
         </div>
 
         <div id='block'>
             <p>Startdato sidste år</p>
             <br>
-            <textarea id="firstDateLastYear" cols="20" rows="1"></textarea>
+            <textarea id="firstDateLastYear" cols="20" rows="1">2019-01-01</textarea>
         </div>
 
         <div id='block'>
             <p>Slutdato sidste år</p>
             <br>
-            <textarea id="lastDateLastYear" cols="20" rows="1"></textarea>
+            <textarea id="lastDateLastYear" cols="20" rows="1">2019-31-12</textarea>
         </div>
     </div>
-
-    <textarea id="myText" rows="4" cols="50">We love to share our experiments, ideas, and knowledge with everyone by writing articles on the latest technology trends.</textarea>
-
-    <button type="button" onclick="saveDataToFile();">Click to Save</button>
-
-    <textarea id="myText 2" rows="4" cols="50">
-        We love to share our experiments, ideas, and knowledge with everyone by writing articles on the latest technology trends.
-    </textarea>
-
-    <button type="button" onclick="saveDataToFile();">Click to Save</button>
 	
 </body>
 <script>
@@ -93,8 +95,6 @@
     document.body.appendChild(x);
     */
 
-    SKF_fields();
-    console.log(SKF_LIST);
 </script>
 
 </html>
