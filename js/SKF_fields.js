@@ -157,6 +157,262 @@ function applyInArraySKF_fields() {
         context: 'duration_only'
     });
     SKF_LIST.push(array);
+
+    array = [];
+    array.push('Virksomheds postnr.')
+    array.push({
+        id: 'AddressOfReportingEntityPostCodeIdentifier',
+        name: '',
+        ready: '',
+        content: '<gsd:AddressOfReportingEntityPostCodeIdentifier contextRef="duration_only">',
+        contentend: '</gsd:AddressOfReportingEntityPostCodeIdentifier>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Virksomheds bygd')
+    array.push({
+        id: 'AddressOfReportingEntityDistrictName',
+        name: '',
+        ready: '',
+        content: '<gsd:AddressOfReportingEntityDistrictName contextRef="duration_only">',
+        contentend: '</gsd:AddressOfReportingEntityDistrictName>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Virksomheds land')
+    array.push({
+        id: 'AddressOfReportingEntityCountry',
+        name: '',
+        ready: 'Føroyar',
+        content: '<gsd:AddressOfReportingEntityCountry contextRef="duration_only">',
+        contentend: '</gsd:AddressOfReportingEntityCountry>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Virksomheds landekode')
+    array.push({
+        id: 'AddressOfReportingEntityCountryIdentificationCode',
+        name: '',
+        ready: 'FO',
+        content: '<gsd:AddressOfReportingEntityCountryIdentificationCode contextRef="duration_only">',
+        contentend: '</gsd:AddressOfReportingEntityCountryIdentificationCode>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Medlem af bestyrelsen nr. 1')
+    array.push({
+        id: 'NameAndSurnameOfMemberOfExecutiveBoard',
+        name: '',
+        ready: '',
+        content: '<cmn:NameAndSurnameOfMemberOfExecutiveBoard contextRef="duration_IdentificationOfMemberOfExecutiveBoardDimension_cmn_memberOfBoardIdentifier_only_1">',
+        contentend: '</cmn:NameAndSurnameOfMemberOfExecutiveBoard>',
+        context: 'duration_IdentificationOfMemberOfExecutiveBoardDimension_cmn_memberOfBoardIdentifier_only_1'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Medlem af bestyrelsen nr. 1s stilling')
+    array.push({
+        id: 'TitleOfMemberOfExecutiveBoard',
+        name: '',
+        ready: 'Stjóri',
+        content: '<cmn:TitleOfMemberOfExecutiveBoard contextRef="duration_IdentificationOfMemberOfExecutiveBoardDimension_cmn_memberOfBoardIdentifier_only_1">',
+        contentend: '</cmn:TitleOfMemberOfExecutiveBoard>',
+        context: 'duration_IdentificationOfMemberOfExecutiveBoardDimension_cmn_memberOfBoardIdentifier_only_1'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Ledelsespåtegning')
+    array.push({
+        id: 'StatementByExecutiveAndSupervisoryBoards',
+        name: '',
+        ready: '(kopier ledelsespåtegninen)',
+        content: '<sob:StatementByExecutiveAndSupervisoryBoards contextRef="duration_only">',
+        contentend: '</sob:StatementByExecutiveAndSupervisoryBoards>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Anvendt regnskabspraksis')
+    array.push({
+        id: 'DisclosureOfAccountingPolicies',
+        name: '',
+        ready: '',
+        content: '<fsa:DisclosureOfAccountingPolicies contextRef="duration_only">',
+        contentend: '</fsa:DisclosureOfAccountingPolicies>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Generelt om indregning og måling')
+    array.push({
+        id: 'DescriptionOfGeneralMattersRelatedToRecognitionMeasurementAndChangesInAccountingPolicies',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfGeneralMattersRelatedToRecognitionMeasurementAndChangesInAccountingPolicies contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfGeneralMattersRelatedToRecognitionMeasurementAndChangesInAccountingPolicies>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Bruttofortjeneste')
+    array.push({
+        id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfGrossProfitLoss',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfGrossProfitLoss contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfGrossProfitLoss>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Af- og nedskrivninger')
+    array.push({
+        id: 'DescriptionOfMethodsOfImpairmentLossesAndDepreciation',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfMethodsOfImpairmentLossesAndDepreciation contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfMethodsOfImpairmentLossesAndDepreciation>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Finansielle poster')
+    array.push({
+        id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfFinanceIncomeAndExpenses',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfFinanceIncomeAndExpenses contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfFinanceIncomeAndExpenses>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Skat af årets resultat')
+    array.push({
+        id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxExpenses',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxExpenses contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxExpenses>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Materielle anlægsaktiver')
+    array.push({
+        id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfPropertyPlantAndEquipment',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfPropertyPlantAndEquipment contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfPropertyPlantAndEquipment>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Tilgodehavender')
+    array.push({
+        id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfReceivables',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfReceivables contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfReceivables>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Likvide beholdninger')
+    array.push({
+        id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfCashAndCashEquivalents',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfCashAndCashEquivalents contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfCashAndCashEquivalents>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Skyldig skat')
+    array.push({
+        id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxPayablesAndDeferredTax',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxPayablesAndDeferredTax contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxPayablesAndDeferredTax>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Gæld')
+    array.push({
+        id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfLiabilitiesOtherThanProvisions',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfLiabilitiesOtherThanProvisions contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfLiabilitiesOtherThanProvisions>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Bruttofortjeneste')
+    array.push({
+        id: 'GrossProfitLoss',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:GrossProfitLoss contextRef="duration_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:GrossProfitLoss>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'GrossProfitLossPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:GrossProfitLoss contextRef="duration_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:GrossProfitLoss>',
+        context: 'duration_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Personaleomkostninger')
+    array.push({
+        id: 'EmployeeBenefitsExpense',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:EmployeeBenefitsExpense contextRef="duration_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:EmployeeBenefitsExpense>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'EmployeeBenefitsExpensePrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:EmployeeBenefitsExpense contextRef="duration_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:EmployeeBenefitsExpense>',
+        context: 'duration_only_previous'
+    });
+    SKF_LIST.push(array);
 }
 
 function applyInArraySKF_CONTEXT_fields() {
