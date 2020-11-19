@@ -12,3 +12,12 @@ function returnDate() {
 
     return today;
 }
+
+function setGlobalVals() {
+    Virkisnavn = document.getElementById("Virkisnavn").value;
+    VATNumber = document.getElementById("VATNumber").value;
+    firstDateThisYear = document.getElementById("firstDateThisYear").value;
+    lastDateThisYear = document.getElementById("lastDateThisYear").value;
+    firstDateLastYear = document.getElementById("firstDateLastYear").value;
+    lastDateLastYear = document.getElementById("lastDateLastYear").value;
+}

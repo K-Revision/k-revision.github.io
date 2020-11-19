@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>XBRL Generator</title>
     <script src="js/FileSaver.js"></script>
+    <script src="js/global.js"></script>
     <script src="js/miscFuncs.js"></script>
     <script src="js/SKF_fields.js"></script>
     <script src="js/saveDataToFile.js"></script>
@@ -23,6 +24,55 @@
 <body>
     <h1>K-ReVision XBRL Generator</h1>
 
+    <br>
+
+    <div id='block_container'>
+
+        <div id='block'>
+            <p>Virkisnavn</p>
+            <br>
+            <textarea id="Virkisnavn" cols="20" rows="1">Sp/f </textarea>
+        </div>
+        
+        <div id='block'>
+            <p>Skrásetingarnr. / V-Tal</p>
+            <br>
+            <textarea id="VATNumber" cols="20" rows="1">00000000</textarea>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div id='block_container'>
+
+        <div id='block'>
+            <p>Startdato i år</p>
+            <br>
+            <textarea id="firstDateThisYear" cols="20" rows="1">2020-01-01</textarea>
+        </div>
+
+        <div id='block'>
+            <p>Slutdato i år</p>
+            <br>
+            <textarea id="lastDateThisYear" cols="20" rows="1">2020-31-12</textarea>
+        </div>
+
+        <div id='block'>
+            <p>Startdato sidste år</p>
+            <br>
+            <textarea id="firstDateLastYear" cols="20" rows="1">2019-01-01</textarea>
+        </div>
+
+        <div id='block'>
+            <p>Slutdato sidste år</p>
+            <br>
+            <textarea id="lastDateLastYear" cols="20" rows="1">2019-31-12</textarea>
+        </div>
+    </div>
+
+    <br>
+    <br>
     <br>
 
     <div id='block_container'>
@@ -50,39 +100,6 @@
     </div>
 
     <br>
-    
-    <div id='block_container'>
-        
-        <div id='block'>
-            <p>Skrásetingarnr. / V-Tal</p>
-            <br>
-            <textarea id="VATNumber" cols="20" rows="1">XXXXXX</textarea>
-        </div>
-
-        <div id='block'>
-            <p>Startdato i år</p>
-            <br>
-            <textarea id="firstDateThisYear" cols="20" rows="1">2020-01-01</textarea>
-        </div>
-
-        <div id='block'>
-            <p>Slutdato i år</p>
-            <br>
-            <textarea id="lastDateThisYear" cols="20" rows="1">2020-31-12</textarea>
-        </div>
-
-        <div id='block'>
-            <p>Startdato sidste år</p>
-            <br>
-            <textarea id="firstDateLastYear" cols="20" rows="1">2019-01-01</textarea>
-        </div>
-
-        <div id='block'>
-            <p>Slutdato sidste år</p>
-            <br>
-            <textarea id="lastDateLastYear" cols="20" rows="1">2019-31-12</textarea>
-        </div>
-    </div>
 	
 </body>
 </html>
