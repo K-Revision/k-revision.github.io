@@ -25,7 +25,8 @@ function setGlobalVals() {
 function setFileName() {
     let firm1 = Virkisnavn.split(' ').join('');
     let firm2 = firm1.split('/').join('');
-    let firmReal = firm2.split('.').join('');
+    let firm3 = firm2.split('-').join('');
+    let firmReal = firm3.split('.').join('');
 
     let firmType = '';
     if (SKForTAKS == 1) firmType = 'SKF';
