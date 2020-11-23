@@ -69,7 +69,9 @@ function saveDataToFile() {
     }
 
     let fullString = documentToString();
+    
+    setFileName();
 
     let blob = new Blob([fullString], { type: "text/plain;charset=utf-8" });
-    saveAs(blob, "dynamic.xml");
+    saveAs(blob, fileName);
 }

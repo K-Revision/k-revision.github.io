@@ -413,6 +413,146 @@ function applyInArraySKF_fields() {
         context: 'duration_only_previous'
     });
     SKF_LIST.push(array);
+
+    array = [];
+    array.push('Afskrivninger anlægsaktiver')
+    array.push({
+        id: 'DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss contextRef="duration_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLossPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss contextRef="duration_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss>',
+        context: 'duration_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Resultat før finansielle poster')
+    array.push({
+        id: 'ProfitLossFromOrdinaryOperatingActivities',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:ProfitLossFromOrdinaryOperatingActivities contextRef="duration_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ProfitLossFromOrdinaryOperatingActivities>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'ProfitLossFromOrdinaryOperatingActivitiesPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:ProfitLossFromOrdinaryOperatingActivities contextRef="duration_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ProfitLossFromOrdinaryOperatingActivities>',
+        context: 'duration_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Finansielle omkostninger')
+    array.push({
+        id: 'OtherFinanceExpenses',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:OtherFinanceExpenses contextRef="duration_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:OtherFinanceExpenses>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'OtherFinanceExpensesPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:OtherFinanceExpenses contextRef="duration_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:OtherFinanceExpenses>',
+        context: 'duration_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Resultat før skat')
+    array.push({
+        id: 'ProfitLossFromOrdinaryActivitiesBeforeTax',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:ProfitLossFromOrdinaryActivitiesBeforeTax contextRef="duration_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ProfitLossFromOrdinaryActivitiesBeforeTax>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'ProfitLossFromOrdinaryActivitiesBeforeTaxPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:ProfitLossFromOrdinaryActivitiesBeforeTax contextRef="duration_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ProfitLossFromOrdinaryActivitiesBeforeTax>',
+        context: 'duration_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Skat af årets resultat')
+    array.push({
+        id: 'TaxExpense',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:TaxExpense contextRef="duration_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:TaxExpense>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'TaxExpensePrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:TaxExpense contextRef="duration_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:TaxExpense>',
+        context: 'duration_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Årets resultat')
+    array.push({
+        id: 'ProfitLoss',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:ProfitLoss contextRef="duration_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ProfitLoss>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'ProfitLossPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:ProfitLoss contextRef="duration_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ProfitLoss>',
+        context: 'duration_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Overført resultat')
+    array.push({
+        id: 'ProfitLossOverf',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:ProfitLoss contextRef="duration_ResultDistributionDimension_fsa_RetainedEarningsMember_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ProfitLoss>',
+        context: 'duration_ResultDistributionDimension_fsa_RetainedEarningsMember_only'
+    });
+    array.push({
+        id: 'ProfitLossOverfPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:ProfitLoss contextRef="duration_ResultDistributionDimension_fsa_RetainedEarningsMember_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ProfitLoss>',
+        context: 'duration_ResultDistributionDimension_fsa_RetainedEarningsMember_only_previous'
+    });
+    SKF_LIST.push(array);
 }
 
 function applyInArraySKF_CONTEXT_fields() {

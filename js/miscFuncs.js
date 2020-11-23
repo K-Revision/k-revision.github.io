@@ -21,3 +21,17 @@ function setGlobalVals() {
     firstDateLastYear = document.getElementById("firstDateLastYear").value;
     lastDateLastYear = document.getElementById("lastDateLastYear").value;
 }
+
+function setFileName() {
+    let firm1 = Virkisnavn.split(' ').join('');
+    let firm2 = firm1.split('/').join('');
+    let firmReal = firm2.split('.').join('');
+
+    let firmType = '';
+    if (SKForTAKS == 1) firmType = 'SKF';
+    if (SKForTAKS == 2) firmType = 'TAKS';
+
+    let firmYear = firstDateThisYear.slice(2, 4);
+
+    fileName = (firmReal + firmType + firmYear + '.xml');
+}

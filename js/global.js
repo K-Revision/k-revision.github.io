@@ -7,3 +7,5 @@ let firstDateThisYear = '';
 let lastDateThisYear = '';
 let firstDateLastYear = '';
 let lastDateLastYear = '';
+
+let fileName = '';
