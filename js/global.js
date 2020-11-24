@@ -10,3 +10,6 @@ let firstDateLastYear = '';
 let lastDateLastYear = '';
 
 let fileName = '';
+
+let fileString = '';
+let fileData = [];

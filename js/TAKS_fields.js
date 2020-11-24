@@ -506,19 +506,253 @@ function applyInArrayTAKS_fields() {
 
     //UPPGERÐ AV SKATTSKYLDUGARI INNTØKU		
 
+    array = [];
+    array.push('Úrslit áðrenn skatt sambært ársroknskapi')
+    array.push({
+        id: 'ProfitLossFromOrdinaryActivitiesBeforeTax',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:ProfitLossFromOrdinaryActivitiesBeforeTax unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fsa:ProfitLossFromOrdinaryActivitiesBeforeTax>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'ProfitLossFromOrdinaryActivitiesBeforeTaxPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:ProfitLossFromOrdinaryActivitiesBeforeTax unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fsa:ProfitLossFromOrdinaryActivitiesBeforeTax>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
 
+    array = [];
+    array.push('Ikki frádráttarloyvdar bøtur og sektir')
+    array.push({
+        id: 'NonDeductableFines',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:NonDeductableFines unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:NonDeductableFines>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'NonDeductableFinesPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:NonDeductableFines unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:NonDeductableFines>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Av- og niðurskrivingar sambært ársroknskapi')
+    array.push({
+        id: 'DepreciationAmortisationExpenseInAnnualAccount',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:DepreciationAmortisationExpenseInAnnualAccount unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:DepreciationAmortisationExpenseInAnnualAccount>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'DepreciationAmortisationExpenseInAnnualAccountPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:DepreciationAmortisationExpenseInAnnualAccount unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:DepreciationAmortisationExpenseInAnnualAccount>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Skattligar avskrivingar av rakstrartólum')
+    array.push({
+        id: 'DepreciationOfToolsAndEquipment',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:DepreciationOfToolsAndEquipment unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:DepreciationOfToolsAndEquipment>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'DepreciationOfToolsAndEquipmentPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:DepreciationOfToolsAndEquipment unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:DepreciationOfToolsAndEquipment>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Ársins úrslit (Skattskyldug inntøka áðrenn framflyting av hallið, at flyta til sjálvuppgávu)')
+    array.push({
+        id: 'TaxableIncomeBeforeLossesCarriedForward',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:TaxableIncomeBeforeLossesCarriedForward unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:TaxableIncomeBeforeLossesCarriedForward>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'TaxableIncomeBeforeLossesCarriedForwardPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:TaxableIncomeBeforeLossesCarriedForward unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:TaxableIncomeBeforeLossesCarriedForward>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
 
     //FÍGGJARSTØÐA		
-    //OGN	
 
+    array = [];
+    array.push('Skattlig saldo við ársenda fyri rakstrartól sambært kap. 1 í avskrivingarlógini')
+    array.push({
+        id: 'FixedAssets',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:FixedAssets unitRef="DKK" decimals="0" contextRef="instant_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only">',
+        contentend: '</fo-tax:FixedAssets>',
+        context: 'instant_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only'
+    });
+    array.push({
+        id: 'FixedAssetsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:FixedAssets unitRef="DKK" decimals="0" contextRef="instant_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only_previous">',
+        contentend: '</fo-tax:FixedAssets>',
+        context: 'instant_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only_previous'
+    });
+    TAKS_LIST.push(array);
 
+    array = [];
+    array.push('Avskrivað í árinum')
+    array.push({
+        id: 'TaxDepreciationOfFixedAssets',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:TaxDepreciationOfFixedAssets unitRef="DKK" decimals="0" contextRef="duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only">',
+        contentend: '</fo-tax:TaxDepreciationOfFixedAssets>',
+        context: 'duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only'
+    });
+    array.push({
+        id: 'TaxDepreciationOfFixedAssetsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:TaxDepreciationOfFixedAssets unitRef="DKK" decimals="0" contextRef="duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only_previous">',
+        contentend: '</fo-tax:TaxDepreciationOfFixedAssets>',
+        context: 'duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only_previous'
+    });
+    TAKS_LIST.push(array);
 
-    //SKYLDUR		
+    //ONNUR ÁOGN
 
+    array = [];
+    array.push('Áogn MVG')
+    array.push({
+        id: 'VATRefundDueButNotPaid',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:VATRefundDueButNotPaid unitRef="DKK" decimals="0" contextRef="instant_only">',
+        contentend: '</fo-tax:VATRefundDueButNotPaid>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'VATRefundDueButNotPaidPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:VATRefundDueButNotPaid unitRef="DKK" decimals="0" contextRef="instant_only_previous">',
+        contentend: '</fo-tax:VATRefundDueButNotPaid>',
+        context: 'instant_only_previous'
+    });
+    TAKS_LIST.push(array);
 
+    array = [];
+    array.push('Onnur áogn til samans')
+    array.push({
+        id: 'OtherShorttermReceivables',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:OtherShorttermReceivables unitRef="DKK" decimals="0" contextRef="instant_only">',
+        contentend: '</fo-tax:OtherShorttermReceivables>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'OtherShorttermReceivablesPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:OtherShorttermReceivables unitRef="DKK" decimals="0" contextRef="instant_only_previous">',
+        contentend: '</fo-tax:OtherShorttermReceivables>',
+        context: 'instant_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    //ONNUR SKULD		
+
+    array = [];
+    array.push('Skuld MVG')
+    array.push({
+        id: 'LiabilityRelatedToOutstandingVATPayment',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:LiabilityRelatedToOutstandingVATPayment unitRef="DKK" decimals="0" contextRef="instant_only">',
+        contentend: '</fo-tax:LiabilityRelatedToOutstandingVATPayment>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'LiabilityRelatedToOutstandingVATPaymentPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:LiabilityRelatedToOutstandingVATPayment unitRef="DKK" decimals="0" contextRef="instant_only_previous">',
+        contentend: '</fo-tax:LiabilityRelatedToOutstandingVATPayment>',
+        context: 'instant_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Onnur skuld til samans')
+    array.push({
+        id: 'OtherLiabilityAndProvisions',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:OtherLiabilityAndProvisions unitRef="DKK" decimals="0" contextRef="instant_only">',
+        contentend: '</fo-tax:OtherLiabilityAndProvisions>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'OtherLiabilityAndProvisionsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:OtherLiabilityAndProvisions unitRef="DKK" decimals="0" contextRef="instant_only_previous">',
+        contentend: '</fo-tax:OtherLiabilityAndProvisions>',
+        context: 'instant_only_previous'
+    });
+    TAKS_LIST.push(array);
 
     //LØNARAVSTEMMAN		
 
+    array = [];
+    array.push('løn flutt um aftuhaldsskipanina')
+    array.push({
+        id: 'WagesAndSalariesTaxWithheld',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:WagesAndSalariesTaxWithheld unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:WagesAndSalariesTaxWithheld>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'WagesAndSalariesTaxWithheldPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:WagesAndSalariesTaxWithheld unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:WagesAndSalariesTaxWithheld>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
 
 }
 
