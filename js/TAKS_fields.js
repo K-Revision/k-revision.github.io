@@ -754,6 +754,94 @@ function applyInArrayTAKS_fields() {
     });
     TAKS_LIST.push(array);
 
+    array = [];
+    array.push('Skyldug løn ultimo')
+    array.push({
+        id: 'WagesAndSalariesDue',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:WagesAndSalariesDue unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:WagesAndSalariesDue>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'WagesAndSalariesDuePrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:WagesAndSalariesDue unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:WagesAndSalariesDue>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Eftirløn smb roknskap')
+    array.push({
+        id: 'PensionContributionIncludedInAccounting',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:PensionContributionIncludedInAccounting unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:PensionContributionIncludedInAccounting>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'PensionContributionIncludedInAccountingPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:PensionContributionIncludedInAccounting unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:PensionContributionIncludedInAccounting>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Eftirløn flutt um afturhaldsskipanina')
+    array.push({
+        id: 'PensionContributionTaxWithheld',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:PensionContributionTaxWithheld unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:PensionContributionTaxWithheld>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'PensionContributionTaxWithheldPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:PensionContributionTaxWithheld unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:PensionContributionTaxWithheld>',
+        context: 'duration_only_previous'
+    });
+    array.push({
+        id: 'PensionContributionTaxWithheldFlutt',
+        name: 'Egnar eftirlønir fluttar um afturhaldsskipanina',
+        ready: '',
+        content: '<fo-tax:PensionContributionTaxWithheld unitRef="DKK" decimals="0" contextRef="duration_WagesSalariesVATNumberDimension_fo-tax_VATNumber_only">',
+        contentend: '</fo-tax:PensionContributionTaxWithheld>',
+        context: 'duration_WagesSalariesVATNumberDimension_fo-tax_VATNumber_only'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Tal av starvsfólkið')
+    array.push({
+        id: 'NumberOfEmployees',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:NumberOfEmployees unitRef="pure" decimals="0" contextRef="instant_only">',
+        contentend: '</fsa:NumberOfEmployees>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'NumberOfEmployeesPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:NumberOfEmployees unitRef="pure" decimals="0" contextRef="instant_only_previous">',
+        contentend: '</fsa:NumberOfEmployees>',
+        context: 'instant_only_previous'
+    });
+    TAKS_LIST.push(array);
+
 }
 
 function applyInArrayTAKS_CONTEXT_fields() {
