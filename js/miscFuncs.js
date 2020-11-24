@@ -23,7 +23,7 @@ function setGlobalVals() {
     lastDateLastYear = document.getElementById("lastDateLastYear").value;
 }
 
-function setFileName() {
+function setFileName(type) {
     let firm1 = Virkisnavn.split(' ').join('');
     let firm2 = firm1.split('/').join('');
     let firm3 = firm2.split('-').join('');
@@ -35,7 +35,7 @@ function setFileName() {
 
     let firmYear = firstDateThisYear.slice(2, 4);
 
-    fileName = (firmReal + firmType + firmYear + '.xml');
+    fileName = (firmReal + firmType + firmYear + type);
 }
 
 function TEST() {

@@ -53,6 +53,8 @@ function saveFields() {
 
     let saveString = JSON.stringify(saveArray);
 
+    setFileName('.json');
+
     let blob = new Blob([saveString], { type: "text/plain;charset=utf-8" });
-    saveAs(blob, 'test.json');
+    saveAs(blob, fileName);
 }

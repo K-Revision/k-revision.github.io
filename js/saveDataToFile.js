@@ -84,7 +84,7 @@ function saveDataToFile() {
 
     let fullString = documentToString();
     
-    setFileName();
+    setFileName('.xml');
 
     let blob = new Blob([fullString], { type: "text/plain;charset=utf-8" });
     saveAs(blob, fileName);
