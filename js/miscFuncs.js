@@ -16,6 +16,7 @@ function returnDate() {
 function setGlobalVals() {
     Virkisnavn = document.getElementById("Virkisnavn").value;
     VATNumber = document.getElementById("VATNumber").value;
+    VATNumberShort = VATNumber.slice(2, 8);
     firstDateThisYear = document.getElementById("firstDateThisYear").value;
     lastDateThisYear = document.getElementById("lastDateThisYear").value;
     firstDateLastYear = document.getElementById("firstDateLastYear").value;
@@ -35,4 +36,22 @@ function setFileName() {
     let firmYear = firstDateThisYear.slice(2, 4);
 
     fileName = (firmReal + firmType + firmYear + '.xml');
+}
+
+function TEST() {
+    let array = [];
+    if (SKForTAKS == 1) array = SKF_LIST;
+    if (SKForTAKS == 2) array = TAKS_LIST;
+
+    let testCounter = 1;
+
+    for(i = 0; i < array.length; i++) {
+        let u = array[i];
+        for(a = 1; a < u.length; a++) {
+            let textA = u[a].id;
+            testString = '' + testCounter;
+            document.getElementById(textA).value = testString;
+            testCounter++;
+        }
+    }
 }

@@ -9,6 +9,7 @@
     <script src="js/miscFuncs.js"></script>
     <script src="js/TAKS_fields.js"></script>
     <script src="js/SKF_fields.js"></script>
+    <script src="js/initializeFields.js"></script>
     <script src="js/saveDataToFile.js"></script>
 
     <style>
@@ -83,7 +84,7 @@
         </div>
 
         <div id='block'>
-            <button type="button" >TAKS XBRL</button>
+            <button type="button" onclick="TAKS_fields();">TAKS XBRL</button>
         </div>
 
         <div id='block'>
@@ -96,6 +97,10 @@
 
         <div id='block'>
             <button type="button" >Åbn .json</button>
+        </div>
+
+        <div id='block'>
+            <button type="button" onclick="TEST();">TEST!</button>
         </div>
     
     </div>

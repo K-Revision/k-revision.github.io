@@ -3,6 +3,7 @@ let SKForTAKS = 0;
 
 let Virkisnavn = '';
 let VATNumber = '';
+let VATNumberShort = '';
 let firstDateThisYear = '';
 let lastDateThisYear = '';
 let firstDateLastYear = '';
