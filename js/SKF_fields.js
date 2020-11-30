@@ -42,6 +42,18 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
+    array.push('Skrásetingarnr.')
+    array.push({
+        id: 'IdentificationNumberCvrOfReportingEntity',
+        name: '',
+        ready: VATNumber,
+        content: '<gsd:IdentificationNumberCvrOfReportingEntity contextRef="duration_only">',
+        contentend: '</gsd:IdentificationNumberCvrOfReportingEntity>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
     array.push('Startdato i år')
     array.push({
         id: 'ReportingPeriodStartDate',
@@ -76,6 +88,18 @@ function applyInArraySKF_fields() {
         content: '<fo-tax:DateOfAnnualGeneralMeeting contextRef="instant_only">',
         contentend: '</fo-tax:DateOfAnnualGeneralMeeting>',
         context: 'instant_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Dato for generalforsamling')
+    array.push({
+        id: 'DateOfGeneralMeeting',
+        name: '',
+        ready: 'yyyy-mm-dd',
+        content: '<gsd:DateOfGeneralMeeting contextRef="duration_only">',
+        contentend: '</gsd:DateOfGeneralMeeting>',
+        context: 'duration_only'
     });
     SKF_LIST.push(array);
 
