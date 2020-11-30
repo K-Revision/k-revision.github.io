@@ -310,6 +310,18 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
+    array.push('Personaleomkostninger')
+    array.push({
+        id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfEmployeeBenefitExpense',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfEmployeeBenefitExpense contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfEmployeeBenefitExpense>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
     array.push('Af- og nedskrivninger')
     array.push({
         id: 'DescriptionOfMethodsOfImpairmentLossesAndDepreciation',
@@ -353,6 +365,18 @@ function applyInArraySKF_fields() {
         ready: '',
         content: '<fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfPropertyPlantAndEquipment contextRef="duration_only">',
         contentend: '</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfPropertyPlantAndEquipment>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Igangværende arbejde')
+    array.push({
+        id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfContractWorkInProgress',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfContractWorkInProgress contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfContractWorkInProgress>',
         context: 'duration_only'
     });
     SKF_LIST.push(array);
@@ -590,6 +614,26 @@ function applyInArraySKF_fields() {
     // Aktiver
 
     array = [];
+    array.push('Bygninger og grunde')
+    array.push({
+        id: 'LandAndBuildings',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:LandAndBuildings contextRef="instant_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:LandAndBuildings>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'LandAndBuildingsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:LandAndBuildings contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:LandAndBuildings>',
+        context: 'instant_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
     array.push('Tekniske anlæg og maskiner')
     array.push({
         id: 'PlantAndMachinery',
@@ -605,6 +649,26 @@ function applyInArraySKF_fields() {
         ready: '',
         content: '<fsa:PlantAndMachinery contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
         contentend: '</fsa:PlantAndMachinery>',
+        context: 'instant_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Driftsmateriel og inventar')
+    array.push({
+        id: 'PropertyPlantAndEquipment',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:PropertyPlantAndEquipment contextRef="instant_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:PropertyPlantAndEquipment>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'PropertyPlantAndEquipmentPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:PropertyPlantAndEquipment contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:PropertyPlantAndEquipment>',
         context: 'instant_only_previous'
     });
     SKF_LIST.push(array);
@@ -645,6 +709,26 @@ function applyInArraySKF_fields() {
         ready: '',
         content: '<fsa:NoncurrentAssets contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
         contentend: '</fsa:NoncurrentAssets>',
+        context: 'instant_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Igangværende arbejde')
+    array.push({
+        id: 'ContractWorkInProgress',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:ContractWorkInProgress contextRef="instant_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ContractWorkInProgress>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'ContractWorkInProgressPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:ContractWorkInProgress contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ContractWorkInProgress>',
         context: 'instant_only_previous'
     });
     SKF_LIST.push(array);

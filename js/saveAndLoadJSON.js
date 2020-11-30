@@ -1,4 +1,7 @@
 function saveFields() {
+
+    setGlobalVals();
+
     let saveArray = [];
 
     let array = [];
@@ -53,7 +56,7 @@ function saveFields() {
 
     let saveString = JSON.stringify(saveArray);
 
-    setFileName('.json');
+    setFileName('JSON.json');
 
     let blob = new Blob([saveString], { type: "text/plain;charset=utf-8" });
     saveAs(blob, fileName);
