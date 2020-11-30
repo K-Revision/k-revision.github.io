@@ -3,9 +3,13 @@ let SKForTAKS = 0;
 
 let Virkisnavn = '';
 let VATNumber = '';
+let VATNumberShort = '';
 let firstDateThisYear = '';
 let lastDateThisYear = '';
 let firstDateLastYear = '';
 let lastDateLastYear = '';
 
 let fileName = '';
+
+let fileString = '';
+let fileData = [];

@@ -1078,18 +1078,6 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
-    array.push('Note: Pantsætninger & sikkerhedsstillelser')
-    array.push({
-        id: 'DisclosureOfMortgagesAndCollaterals',
-        name: '',
-        ready: '',
-        content: '<fsa:DisclosureOfMortgagesAndCollaterals contextRef="duration_only">',
-        contentend: '</fsa:DisclosureOfMortgagesAndCollaterals>',
-        context: 'duration_only'
-    });
-    SKF_LIST.push(array);
-
-    array = [];
     array.push('Note: Eventualforpligtelser')
     array.push({
         id: 'DisclosureOfContingentLiabilities',
@@ -1138,46 +1126,4 @@ function applyInArraySKF_CONTEXT_fields() {
         id: 'instant_only_previous',
         content: '<xbrli:context id="instant_only_previous"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:instant>' + lastDateLastYear + '</xbrli:instant></xbrli:period></xbrli:context>'
     })
-}
-
-function createSKF_fieldsElements() {
-    SKForTAKS = 1;
-
-    for(i = 0; i < SKF_LIST.length; i++) {
-        let u = SKF_LIST[i];
-        let q = document.createElement('p');
-        let w = document.createTextNode(u[0]);
-        q.appendChild(w);
-        document.body.appendChild(q);
-
-        let blockC = document.createElement('div');
-        blockC.id = 'block_container';
-
-        for(a = 1; a < u.length; a++) {
-            let block = document.createElement('div');
-            block.id = 'block';
-            if (u[a].name != ''){
-                let q = document.createElement('p');
-                let w = document.createTextNode(u[a].name);
-                q.appendChild(w);
-                block.appendChild(q);
-            }
-            let x = document.createElement("TEXTAREA");
-            let t = document.createTextNode(u[a].ready);
-            x.appendChild(t);
-            x.id = u[a].id;
-            block.appendChild(x);
-            blockC.appendChild(block);
-        }
-        let br = document.createElement('br');
-        document.body.appendChild(blockC);
-        document.body.appendChild(br);
-        document.body.appendChild(br);
-    }
-}
-
-function SKF_fields() {
-    setGlobalVals();
-    applyInArraySKF_fields();
-    if (SKForTAKS == 0) createSKF_fieldsElements();
 }

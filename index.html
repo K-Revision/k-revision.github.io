@@ -9,7 +9,10 @@
     <script src="js/miscFuncs.js"></script>
     <script src="js/TAKS_fields.js"></script>
     <script src="js/SKF_fields.js"></script>
+    <script src="js/initializeFields.js"></script>
+    <script src="js/saveAndLoadJSON.js"></script>
     <script src="js/saveDataToFile.js"></script>
+
 
     <style>
         #block_container {
@@ -17,6 +20,9 @@
         }
         #block {
             padding-right: 40px;
+        }
+        #file{
+            display: none;
         }
     </style>
 
@@ -83,7 +89,7 @@
         </div>
 
         <div id='block'>
-            <button type="button" >TAKS XBRL</button>
+            <button type="button" onclick="TAKS_fields();">TAKS XBRL</button>
         </div>
 
         <div id='block'>
@@ -91,16 +97,48 @@
         </div>
 
         <div id='block'>
-            <button type="button" >Gem .json</button>
+            <button type="button" onclick="saveFields();">Gem .json</button>
         </div>
 
         <div id='block'>
-            <button type="button" >Åbn .json</button>
+            <input type="file">
+            <button id="myBtn">Hent .json</button>
+            <pre id="file"></pre>
+        </div>
+
+        <div id='block'>
+            <button type="button" onclick="TEST();">TEST!</button>
         </div>
     
     </div>
 
     <br>
+
+    <script>
+        document.getElementById("myBtn").addEventListener("click", function() {
+
+            var reader = new FileReader();
+            reader.addEventListener('load', function() {
+                fileString = this.result;
+                fileData = JSON.parse(fileString);
+
+                if (SKForTAKS == 1 && fileData[0] == 2 || SKForTAKS == 2 && fileData[0] == 1) alert('Refresh siden før du henter en fil');
+
+                if (SKForTAKS == 0 || SKForTAKS == 1 && fileData[0] == 1 || SKForTAKS == 2 && fileData[0] == 2) {
+                    if (SKForTAKS == 0) alert('Refresh siden, du må vælge type af XBRL før du kan hente en .json fil')
+
+                    for(i = 1; i < fileData.length; i++) {
+                        let u = fileData[i];
+                        document.getElementById(u[0]).value = u[1];
+                    }
+
+                }
+            });
+            reader.readAsText(document.querySelector('input').files[0]);
+
+        });
+    </script>
 	
 </body>
+
 </html>
