@@ -66,6 +66,26 @@ function applyInArrayTAKS_fields() {
     });
     TAKS_LIST.push(array);
 
+    array = [];
+    array.push('Vøkstur/minking í arbeiði í gerð')
+    array.push({
+        id: 'ChangeInWorkInProgress',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:ChangeInWorkInProgress unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:ChangeInWorkInProgress>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'ChangeInWorkInProgressPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:ChangeInWorkInProgress unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:ChangeInWorkInProgress>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
     //UTTANHÝSIS KOSTNAðUR		
 
     array = [];
@@ -460,6 +480,26 @@ function applyInArrayTAKS_fields() {
     });
     TAKS_LIST.push(array);
 
+    array = [];
+    array.push('Starvsfólkakostnaðir (Total)')
+    array.push({
+        id: 'EmployeeBenefitsExpense',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:EmployeeBenefitsExpense unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fsa:EmployeeBenefitsExpense>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'EmployeeBenefitsExpensePrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:EmployeeBenefitsExpense unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fsa:EmployeeBenefitsExpense>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
     //AÐRIR POSTAR		
 
     array = [];
@@ -645,6 +685,26 @@ function applyInArrayTAKS_fields() {
         content: '<fo-tax:TaxDepreciationOfFixedAssets unitRef="DKK" decimals="0" contextRef="duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only_previous">',
         contentend: '</fo-tax:TaxDepreciationOfFixedAssets>',
         context: 'duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Ikki avskrivingarbar ogn')
+    array.push({
+        id: 'FixedAssetsIkkiAvskriv',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:FixedAssets unitRef="DKK" decimals="0" contextRef="instant_PropertyNonDepreciableDimension_fo-tax_CarryingAmount_only">',
+        contentend: '</fo-tax:FixedAssets>',
+        context: 'instant_PropertyNonDepreciableDimension_fo-tax_CarryingAmount_only'
+    });
+    array.push({
+        id: 'FixedAssetsIkkiAvskrivPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:FixedAssets unitRef="DKK" decimals="0" contextRef="instant_PropertyNonDepreciableDimension_fo-tax_CarryingAmount_only_previous">',
+        contentend: '</fo-tax:FixedAssets>',
+        context: 'instant_PropertyNonDepreciableDimension_fo-tax_CarryingAmount_only_previous'
     });
     TAKS_LIST.push(array);
 
@@ -914,6 +974,16 @@ function applyInArrayTAKS_CONTEXT_fields() {
     TAKS_LIST_CONTEXT.push({
         id: 'instant_only_previous',
         content: '<xbrli:context id="instant_only_previous"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:instant>' + lastDateLastYear + '</xbrli:instant></xbrli:period></xbrli:context>'
+    })
+
+    TAKS_LIST_CONTEXT.push({
+        id: 'instant_PropertyNonDepreciableDimension_fo-tax_CarryingAmount_only',
+        content: '<xbrli:context id="instant_PropertyNonDepreciableDimension_fo-tax_CarryingAmount_only"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:instant>' + lastDateThisYear + '</xbrli:instant></xbrli:period><xbrli:scenario><xbrldi:explicitMember dimension="fo-tax:PropertyNonDepreciableDimension">fo-tax:CarryingAmount</xbrldi:explicitMember></xbrli:scenario></xbrli:context>'
+    })
+
+    TAKS_LIST_CONTEXT.push({
+        id: 'instant_PropertyNonDepreciableDimension_fo-tax_CarryingAmount_only_previous',
+        content: '<xbrli:context id="instant_PropertyNonDepreciableDimension_fo-tax_CarryingAmount_only_previous"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:instant>' + lastDateLastYear + '</xbrli:instant></xbrli:period><xbrli:scenario><xbrldi:explicitMember dimension="fo-tax:PropertyNonDepreciableDimension">fo-tax:CarryingAmount</xbrldi:explicitMember></xbrli:scenario></xbrli:context>'
     })
 
 }
