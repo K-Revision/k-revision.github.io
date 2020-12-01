@@ -67,6 +67,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Nettoumsetningur fevnd av § 2 stk. 3 í MVG lógini (tænastur undantiknar avgjaldsskyldu)')
+    array.push({
+        id: 'NetSalesVATorNotServices',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:NetSales unitRef="DKK" decimals="0" contextRef="duration_VATApplicableNotApplicableDimension_fo-tax_VATNotApplicableServices_only">',
+        contentend: '</fo-tax:NetSales>',
+        context: 'duration_VATApplicableNotApplicableDimension_fo-tax_VATNotApplicableServices_only'
+    });
+    array.push({
+        id: 'NetSalesVATorNotServicesPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:NetSales unitRef="DKK" decimals="0" contextRef="duration_VATApplicableNotApplicableDimension_fo-tax_VATNotApplicableServices_only_previous">',
+        contentend: '</fo-tax:NetSales>',
+        context: 'duration_VATApplicableNotApplicableDimension_fo-tax_VATNotApplicableServices_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Vøkstur/minking í arbeiði í gerð')
     array.push({
         id: 'ChangeInWorkInProgress',
@@ -82,6 +102,26 @@ function applyInArrayTAKS_fields() {
         ready: '',
         content: '<fo-tax:ChangeInWorkInProgress unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
         contentend: '</fo-tax:ChangeInWorkInProgress>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Broyting í goymslum av lidnum og vørum í gerð')
+    array.push({
+        id: 'ChangeInInventoriesOfFinishedGoodsWorkInProgressAndGoodsForResale',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:ChangeInInventoriesOfFinishedGoodsWorkInProgressAndGoodsForResale unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fsa:ChangeInInventoriesOfFinishedGoodsWorkInProgressAndGoodsForResale>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'ChangeInInventoriesOfFinishedGoodsWorkInProgressAndGoodsForResalePrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:ChangeInInventoriesOfFinishedGoodsWorkInProgressAndGoodsForResale unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fsa:ChangeInInventoriesOfFinishedGoodsWorkInProgressAndGoodsForResale>',
         context: 'duration_only_previous'
     });
     TAKS_LIST.push(array);
@@ -164,6 +204,26 @@ function applyInArrayTAKS_fields() {
         ready: '',
         content: '<fsa:OtherExternalExpenses unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
         contentend: '</fsa:OtherExternalExpenses>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Orka (El/olja)')
+    array.push({
+        id: 'CostOfEnergy',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:CostOfEnergy unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:CostOfEnergy>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'CostOfEnergyPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:CostOfEnergy unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:CostOfEnergy>',
         context: 'duration_only_previous'
     });
     TAKS_LIST.push(array);
@@ -627,6 +687,46 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Roknskaparlig niðurskriving av skuldarum við ársbyrjan útreiðsluførd')
+    array.push({
+        id: 'ProvisionsForWriteoffsInRespectOfTradeReceivablesRecognisedInProfitOrLossStart',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:ProvisionsForWriteoffsInRespectOfTradeReceivablesRecognisedInProfitOrLoss unitRef="DKK" decimals="0" contextRef="instant_only_start">',
+        contentend: '</fo-tax:ProvisionsForWriteoffsInRespectOfTradeReceivablesRecognisedInProfitOrLoss>',
+        context: 'instant_only_start'
+    });
+    array.push({
+        id: 'ProvisionsForWriteoffsInRespectOfTradeReceivablesRecognisedInProfitOrLossStartPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:ProvisionsForWriteoffsInRespectOfTradeReceivablesRecognisedInProfitOrLoss unitRef="DKK" decimals="0" contextRef="instant_only_previous_start">',
+        contentend: '</fo-tax:ProvisionsForWriteoffsInRespectOfTradeReceivablesRecognisedInProfitOrLoss>',
+        context: 'instant_only_previous_start'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Roknskaparlig niðurskriving av skuldarum við ársenda inntøkuførd')
+    array.push({
+        id: 'ProvisionsForWriteoffsInRespectOfTradeReceivablesRecognisedInProfitOrLoss',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:ProvisionsForWriteoffsInRespectOfTradeReceivablesRecognisedInProfitOrLoss unitRef="DKK" decimals="0" contextRef="instant_only">',
+        contentend: '</fo-tax:ProvisionsForWriteoffsInRespectOfTradeReceivablesRecognisedInProfitOrLoss>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'ProvisionsForWriteoffsInRespectOfTradeReceivablesRecognisedInProfitOrLossPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:ProvisionsForWriteoffsInRespectOfTradeReceivablesRecognisedInProfitOrLoss unitRef="DKK" decimals="0" contextRef="instant_only_previous">',
+        contentend: '</fo-tax:ProvisionsForWriteoffsInRespectOfTradeReceivablesRecognisedInProfitOrLoss>',
+        context: 'instant_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Ársins úrslit (Skattskyldug inntøka áðrenn framflyting av hallið, at flyta til sjálvuppgávu)')
     array.push({
         id: 'TaxableIncomeBeforeLossesCarriedForward',
@@ -665,6 +765,26 @@ function applyInArrayTAKS_fields() {
         content: '<fo-tax:FixedAssets unitRef="DKK" decimals="0" contextRef="instant_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only_previous">',
         contentend: '</fo-tax:FixedAssets>',
         context: 'instant_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Tilgongd í árinum')
+    array.push({
+        id: 'IncreaseInFixedAssets',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:IncreaseInFixedAssets unitRef="DKK" decimals="0" contextRef="duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only">',
+        contentend: '</fo-tax:IncreaseInFixedAssets>',
+        context: 'duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only'
+    });
+    array.push({
+        id: 'IncreaseInFixedAssetsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:IncreaseInFixedAssets unitRef="DKK" decimals="0" contextRef="duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only_previous">',
+        contentend: '</fo-tax:IncreaseInFixedAssets>',
+        context: 'duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only_previous'
     });
     TAKS_LIST.push(array);
 
@@ -815,6 +935,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Skyldug løn primo')
+    array.push({
+        id: 'WagesAndSalariesDueStart',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:WagesAndSalariesDue unitRef="DKK" decimals="0" contextRef="duration_only_start">',
+        contentend: '</fo-tax:WagesAndSalariesDue>',
+        context: 'duration_only_start'
+    });
+    array.push({
+        id: 'WagesAndSalariesDueStartPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:WagesAndSalariesDue unitRef="DKK" decimals="0" contextRef="duration_only_previous_start">',
+        contentend: '</fo-tax:WagesAndSalariesDue>',
+        context: 'duration_only_previous_start'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Skyldug løn ultimo')
     array.push({
         id: 'WagesAndSalariesDue',
@@ -937,6 +1077,16 @@ function applyInArrayTAKS_CONTEXT_fields() {
     })
 
     TAKS_LIST_CONTEXT.push({
+        id: 'duration_VATApplicableNotApplicableDimension_fo-tax_VATNotApplicableServices_only',
+        content: '<xbrli:context id="duration_VATApplicableNotApplicableDimension_fo-tax_VATNotApplicableServices_only"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>' + firstDateThisYear + '</xbrli:startDate><xbrli:endDate>' + lastDateThisYear + '</xbrli:endDate></xbrli:period><xbrli:scenario><xbrldi:explicitMember dimension="fo-tax:VATApplicableNotApplicableDimension">fo-tax:VATNotApplicableServices</xbrldi:explicitMember></xbrli:scenario></xbrli:context>'
+    })
+
+    TAKS_LIST_CONTEXT.push({
+        id: 'duration_VATApplicableNotApplicableDimension_fo-tax_VATNotApplicableServices_only_previous',
+        content: '<xbrli:context id="duration_VATApplicableNotApplicableDimension_fo-tax_VATNotApplicableServices_only_previous"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>' + firstDateLastYear + '</xbrli:startDate><xbrli:endDate>' + lastDateLastYear + '</xbrli:endDate></xbrli:period><xbrli:scenario><xbrldi:explicitMember dimension="fo-tax:VATApplicableNotApplicableDimension">fo-tax:VATNotApplicableServices</xbrldi:explicitMember></xbrli:scenario></xbrli:context>'
+    })
+
+    TAKS_LIST_CONTEXT.push({
         id: 'duration_WagesSalariesVATNumberDimension_fo-tax_VATNumber_only',
         content: '<xbrli:context id="duration_WagesSalariesVATNumberDimension_fo-tax_VATNumber_only"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>' + firstDateThisYear + '</xbrli:startDate><xbrli:endDate>' + lastDateThisYear + '</xbrli:endDate></xbrli:period><xbrli:scenario><xbrldi:typedMember dimension="fo-tax:WagesSalariesVATNumberDimension"><fo-tax:VATNumber>' + VATNumberShort + '</fo-tax:VATNumber></xbrldi:typedMember></xbrli:scenario></xbrli:context>'
     })
@@ -984,6 +1134,26 @@ function applyInArrayTAKS_CONTEXT_fields() {
     TAKS_LIST_CONTEXT.push({
         id: 'instant_PropertyNonDepreciableDimension_fo-tax_CarryingAmount_only_previous',
         content: '<xbrli:context id="instant_PropertyNonDepreciableDimension_fo-tax_CarryingAmount_only_previous"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:instant>' + lastDateLastYear + '</xbrli:instant></xbrli:period><xbrli:scenario><xbrldi:explicitMember dimension="fo-tax:PropertyNonDepreciableDimension">fo-tax:CarryingAmount</xbrldi:explicitMember></xbrli:scenario></xbrli:context>'
+    })
+
+    TAKS_LIST_CONTEXT.push({
+        id: 'instant_only_start',
+        content: '<xbrli:context id="instant_only_start"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:instant>' + firstDateThisYear + '</xbrli:instant></xbrli:period></xbrli:context>'
+    })
+
+    TAKS_LIST_CONTEXT.push({
+        id: 'instant_only_previous_start',
+        content: '<xbrli:context id="instant_only_previous_start"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:instant>' + firstDateLastYear + '</xbrli:instant></xbrli:period></xbrli:context>'
+    })
+
+    TAKS_LIST_CONTEXT.push({
+        id: 'duration_only_start',
+        content: '<xbrli:context id="duration_only_start"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>' + firstDateThisYear + '</xbrli:startDate><xbrli:endDate>' + lastDateThisYear + '</xbrli:endDate></xbrli:period></xbrli:context>'
+    })
+
+    TAKS_LIST_CONTEXT.push({
+        id: 'duration_only_previous_start',
+        content: '<xbrli:context id="duration_only_previous_start"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>' + firstDateLastYear + '</xbrli:startDate><xbrli:endDate>' + lastDateLastYear + '</xbrli:endDate></xbrli:period></xbrli:context>'
     })
 
 }
