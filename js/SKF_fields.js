@@ -370,6 +370,18 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
+    array.push('Varebeholdninger')
+    array.push({
+        id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfInventories',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfInventories contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfInventories>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
     array.push('Igangværende arbejde')
     array.push({
         id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfContractWorkInProgress',
@@ -413,6 +425,18 @@ function applyInArraySKF_fields() {
         ready: '',
         content: '<fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxPayablesAndDeferredTax contextRef="duration_only">',
         contentend: '</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfTaxPayablesAndDeferredTax>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Udbytte')
+    array.push({
+        id: 'DescriptionOfMethodsOfDividends',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfMethodsOfDividends contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfMethodsOfDividends>',
         context: 'duration_only'
     });
     SKF_LIST.push(array);
@@ -507,6 +531,26 @@ function applyInArraySKF_fields() {
         ready: '',
         content: '<fsa:ProfitLossFromOrdinaryOperatingActivities contextRef="duration_only_previous" unitRef="DKK" decimals="0">',
         contentend: '</fsa:ProfitLossFromOrdinaryOperatingActivities>',
+        context: 'duration_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Finansielle indtægter')
+    array.push({
+        id: 'OtherFinanceIncome',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:OtherFinanceIncome contextRef="duration_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:OtherFinanceIncome>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'OtherFinanceIncomePrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:OtherFinanceIncome contextRef="duration_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:OtherFinanceIncome>',
         context: 'duration_only_previous'
     });
     SKF_LIST.push(array);
@@ -709,6 +753,26 @@ function applyInArraySKF_fields() {
         ready: '',
         content: '<fsa:NoncurrentAssets contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
         contentend: '</fsa:NoncurrentAssets>',
+        context: 'instant_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Råvarer og hjælpematerialer')
+    array.push({
+        id: 'Inventories',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:Inventories contextRef="instant_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:Inventories>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'InventoriesPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:Inventories contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:Inventories>',
         context: 'instant_only_previous'
     });
     SKF_LIST.push(array);
