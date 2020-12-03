@@ -236,7 +236,7 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
-    array.push('Medlem af bestyrelsen nr. 1')
+    array.push('Medlem af direktionen nr. 1')
     array.push({
         id: 'NameAndSurnameOfMemberOfExecutiveBoard',
         name: '',
@@ -248,7 +248,7 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
-    array.push('Medlem af bestyrelsen nr. 1s stilling')
+    array.push('Medlem af direktionen nr. 1s stilling')
     array.push({
         id: 'TitleOfMemberOfExecutiveBoard',
         name: '',
@@ -256,6 +256,78 @@ function applyInArraySKF_fields() {
         content: '<cmn:TitleOfMemberOfExecutiveBoard contextRef="duration_IdentificationOfMemberOfExecutiveBoardDimension_cmn_memberOfBoardIdentifier_only_1">',
         contentend: '</cmn:TitleOfMemberOfExecutiveBoard>',
         context: 'duration_IdentificationOfMemberOfExecutiveBoardDimension_cmn_memberOfBoardIdentifier_only_1'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Medlem af bestyrelsen nr. 1')
+    array.push({
+        id: 'NameAndSurnameOfMemberOfSupervisoryBoard',
+        name: '',
+        ready: '',
+        content: '<cmn:NameAndSurnameOfMemberOfSupervisoryBoard contextRef="duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_1">',
+        contentend: '</cmn:NameAndSurnameOfMemberOfSupervisoryBoard>',
+        context: 'duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_1'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Medlem af bestyrelsen nr. 1s stilling')
+    array.push({
+        id: 'TitleOfMemberOfSupervisoryBoard',
+        name: '',
+        ready: 'Formaður',
+        content: '<cmn:TitleOfMemberOfSupervisoryBoard contextRef="duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_1">',
+        contentend: '</cmn:TitleOfMemberOfSupervisoryBoard>',
+        context: 'duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_1'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Medlem af bestyrelsen nr. 2')
+    array.push({
+        id: 'NameAndSurnameOfMemberOfSupervisoryBoard2',
+        name: '',
+        ready: '',
+        content: '<cmn:NameAndSurnameOfMemberOfSupervisoryBoard contextRef="duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_2">',
+        contentend: '</cmn:NameAndSurnameOfMemberOfSupervisoryBoard>',
+        context: 'duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_2'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Medlem af bestyrelsen nr. 2s stilling')
+    array.push({
+        id: 'TitleOfMemberOfSupervisoryBoard2',
+        name: '',
+        ready: '',
+        content: '<cmn:TitleOfMemberOfSupervisoryBoard contextRef="duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_2">',
+        contentend: '</cmn:TitleOfMemberOfSupervisoryBoard>',
+        context: 'duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_2'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Medlem af bestyrelsen nr. 3')
+    array.push({
+        id: 'NameAndSurnameOfMemberOfSupervisoryBoard3',
+        name: '',
+        ready: '',
+        content: '<cmn:NameAndSurnameOfMemberOfSupervisoryBoard contextRef="duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_3">',
+        contentend: '</cmn:NameAndSurnameOfMemberOfSupervisoryBoard>',
+        context: 'duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_3'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Medlem af bestyrelsen nr. 3s stilling')
+    array.push({
+        id: 'TitleOfMemberOfSupervisoryBoard3',
+        name: '',
+        ready: '',
+        content: '<cmn:TitleOfMemberOfSupervisoryBoard contextRef="duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_3">',
+        contentend: '</cmn:TitleOfMemberOfSupervisoryBoard>',
+        context: 'duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_3'
     });
     SKF_LIST.push(array);
 
@@ -838,6 +910,26 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
+    array.push('Skatteaktiv')
+    array.push({
+        id: 'CurrentDeferredTaxAssets',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:CurrentDeferredTaxAssets contextRef="instant_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:CurrentDeferredTaxAssets>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'CurrentDeferredTaxAssetsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:CurrentDeferredTaxAssets contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:CurrentDeferredTaxAssets>',
+        context: 'instant_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
     array.push('Likvide beholdninger')
     array.push({
         id: 'CashAndCashEquivalents',
@@ -915,6 +1007,26 @@ function applyInArraySKF_fields() {
         ready: '',
         content: '<fsa:ContributedCapital contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
         contentend: '</fsa:ContributedCapital>',
+        context: 'instant_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Overkursfond')
+    array.push({
+        id: 'ProvisionsForIncomeExceedCostForTheFinancialYear',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:ProvisionsForIncomeExceedCostForTheFinancialYear contextRef="instant_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ProvisionsForIncomeExceedCostForTheFinancialYear>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'ProvisionsForIncomeExceedCostForTheFinancialYearPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:ProvisionsForIncomeExceedCostForTheFinancialYear contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ProvisionsForIncomeExceedCostForTheFinancialYear>',
         context: 'instant_only_previous'
     });
     SKF_LIST.push(array);
@@ -1253,6 +1365,21 @@ function applyInArraySKF_CONTEXT_fields() {
     SKF_LIST_CONTEXT.push({
         id: 'duration_IdentificationOfMemberOfExecutiveBoardDimension_cmn_memberOfBoardIdentifier_only_1',
         content: '<xbrli:context id="duration_IdentificationOfMemberOfExecutiveBoardDimension_cmn_memberOfBoardIdentifier_only_1"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>' + firstDateThisYear + '</xbrli:startDate><xbrli:endDate>' + lastDateThisYear + '</xbrli:endDate></xbrli:period><xbrli:scenario><xbrldi:typedMember dimension="cmn:IdentificationOfMemberOfExecutiveBoardDimension"><cmn:memberOfBoardIdentifier>1</cmn:memberOfBoardIdentifier></xbrldi:typedMember></xbrli:scenario></xbrli:context>'
+    })
+
+    SKF_LIST_CONTEXT.push({
+        id: 'duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_1',
+        content: '<xbrli:context id="duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_1"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>' + firstDateThisYear + '</xbrli:startDate><xbrli:endDate>' + lastDateThisYear + '</xbrli:endDate></xbrli:period><xbrli:scenario><xbrldi:typedMember dimension="cmn:IdentificationOfMemberOfSupervisoryBoardDimension"><cmn:memberOfBoardIdentifier>1</cmn:memberOfBoardIdentifier></xbrldi:typedMember></xbrli:scenario></xbrli:context>'
+    })
+
+    SKF_LIST_CONTEXT.push({
+        id: 'duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_2',
+        content: '<xbrli:context id="duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_2"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>' + firstDateThisYear + '</xbrli:startDate><xbrli:endDate>' + lastDateThisYear + '</xbrli:endDate></xbrli:period><xbrli:scenario><xbrldi:typedMember dimension="cmn:IdentificationOfMemberOfSupervisoryBoardDimension"><cmn:memberOfBoardIdentifier>2</cmn:memberOfBoardIdentifier></xbrldi:typedMember></xbrli:scenario></xbrli:context>'
+    })
+
+    SKF_LIST_CONTEXT.push({
+        id: 'duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_3',
+        content: '<xbrli:context id="duration_IdentificationOfMemberOfSupervisoryBoardDimension_cmn_memberOfBoardIdentifier_only_3"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>' + firstDateThisYear + '</xbrli:startDate><xbrli:endDate>' + lastDateThisYear + '</xbrli:endDate></xbrli:period><xbrli:scenario><xbrldi:typedMember dimension="cmn:IdentificationOfMemberOfSupervisoryBoardDimension"><cmn:memberOfBoardIdentifier>3</cmn:memberOfBoardIdentifier></xbrldi:typedMember></xbrli:scenario></xbrli:context>'
     })
 
     SKF_LIST_CONTEXT.push({
