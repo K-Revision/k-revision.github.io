@@ -442,6 +442,18 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
+    array.push('Periodeafgrænsningsposter')
+    array.push({
+        id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfDeferredIncomeAssets',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfDeferredIncomeAssets contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfDeferredIncomeAssets>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
     array.push('Varebeholdninger')
     array.push({
         id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfInventories',
@@ -1112,6 +1124,66 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
+    array.push('Kreditinstitutter (Langfristet)')
+    array.push({
+        id: 'LongtermDebtToBanks',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:LongtermDebtToBanks contextRef="instant_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:LongtermDebtToBanks>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'LongtermDebtToBanksPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:LongtermDebtToBanks contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:LongtermDebtToBanks>',
+        context: 'instant_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Langfristet gæld i alt')
+    array.push({
+        id: 'LongtermLiabilitiesOtherThanProvisions',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:LongtermLiabilitiesOtherThanProvisions contextRef="instant_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:LongtermLiabilitiesOtherThanProvisions>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'LongtermLiabilitiesOtherThanProvisionsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:LongtermLiabilitiesOtherThanProvisions contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:LongtermLiabilitiesOtherThanProvisions>',
+        context: 'instant_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Langfristet gæld m/forfald inden for 1 år')
+    array.push({
+        id: 'ShorttermPartOfLongtermLiabilitiesOtherThanProvisions',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:ShorttermPartOfLongtermLiabilitiesOtherThanProvisions contextRef="instant_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ShorttermPartOfLongtermLiabilitiesOtherThanProvisions>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'ShorttermPartOfLongtermLiabilitiesOtherThanProvisionsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:ShorttermPartOfLongtermLiabilitiesOtherThanProvisions contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ShorttermPartOfLongtermLiabilitiesOtherThanProvisions>',
+        context: 'instant_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
     array.push('Kreditinstitutter')
     array.push({
         id: 'ShorttermDebtToBanks',
@@ -1321,6 +1393,18 @@ function applyInArraySKF_fields() {
         ready: '',
         content: '<fsa:DisclosureOfDeferredTaxAssetsAndLiabilities contextRef="duration_only">',
         contentend: '</fsa:DisclosureOfDeferredTaxAssetsAndLiabilities>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Note: Langfristet gæld')
+    array.push({
+        id: 'DisclosureOfLongtermLiabilities',
+        name: '',
+        ready: '',
+        content: '<fsa:DisclosureOfLongtermLiabilities contextRef="duration_only">',
+        contentend: '</fsa:DisclosureOfLongtermLiabilities>',
         context: 'duration_only'
     });
     SKF_LIST.push(array);
