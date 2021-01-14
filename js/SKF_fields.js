@@ -1224,6 +1224,26 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
+    array.push('Lån selskabsdeltagere og ledelse')
+    array.push({
+        id: 'ShorttermPayablesToShareholdersAndManagement',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:ShorttermPayablesToShareholdersAndManagement contextRef="instant_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ShorttermPayablesToShareholdersAndManagement>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'ShorttermPayablesToShareholdersAndManagementPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:ShorttermPayablesToShareholdersAndManagement contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ShorttermPayablesToShareholdersAndManagement>',
+        context: 'instant_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
     array.push('Anden gæld')
     array.push({
         id: 'OtherShorttermPayables',
