@@ -627,6 +627,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Skattafrítt vinningsbýti')
+    array.push({
+        id: 'TaxExemptedDividend',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:TaxExemptedDividend unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:TaxExemptedDividend>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'TaxExemptedDividendPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:TaxExemptedDividend unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:TaxExemptedDividend>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Ikki frádráttarloyvdar bøtur og sektir')
     array.push({
         id: 'NonDeductableFines',
@@ -642,6 +662,26 @@ function applyInArrayTAKS_fields() {
         ready: '',
         content: '<fo-tax:NonDeductableFines unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
         contentend: '</fo-tax:NonDeductableFines>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Aðrar varandi reguleringar (ikki frádráttarloyvdur kostnaður)')
+    array.push({
+        id: 'OtherPermanentAdjustmentsNonDeductableExpenses',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:OtherPermanentAdjustmentsNonDeductableExpenses unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:OtherPermanentAdjustmentsNonDeductableExpenses>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'OtherPermanentAdjustmentsNonDeductableExpensesPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:OtherPermanentAdjustmentsNonDeductableExpenses unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:OtherPermanentAdjustmentsNonDeductableExpenses>',
         context: 'duration_only_previous'
     });
     TAKS_LIST.push(array);

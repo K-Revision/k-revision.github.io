@@ -442,6 +442,18 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
+    array.push('Finansielle anlægsaktiver')
+    array.push({
+        id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfInvestments',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfInvestments contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfInvestments>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
     array.push('Periodeafgrænsningsposter')
     array.push({
         id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfDeferredIncomeAssets',
@@ -842,6 +854,26 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
+    array.push('Finansielle anlægsaktiver i alt')
+    array.push({
+        id: 'LongtermInvestmentsAndReceivables',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:LongtermInvestmentsAndReceivables contextRef="instant_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:LongtermInvestmentsAndReceivables>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'LongtermInvestmentsAndReceivablesPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:LongtermInvestmentsAndReceivables contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:LongtermInvestmentsAndReceivables>',
+        context: 'instant_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
     array.push('Råvarer og hjælpematerialer')
     array.push({
         id: 'Inventories',
@@ -937,6 +969,46 @@ function applyInArraySKF_fields() {
         ready: '',
         content: '<fsa:CurrentDeferredTaxAssets contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
         contentend: '</fsa:CurrentDeferredTaxAssets>',
+        context: 'instant_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Tilgodehavende hos selskabsdeltager og ledelse')
+    array.push({
+        id: 'PayablesToShareholdersAndManagement',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:PayablesToShareholdersAndManagement contextRef="instant_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:PayablesToShareholdersAndManagement>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'PayablesToShareholdersAndManagementPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:PayablesToShareholdersAndManagement contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:PayablesToShareholdersAndManagement>',
+        context: 'instant_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Periodeafgrænsningsposter')
+    array.push({
+        id: 'DeferredIncomeAssets',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:DeferredIncomeAssets contextRef="instant_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:DeferredIncomeAssets>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'DeferredIncomeAssetsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:DeferredIncomeAssets contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:DeferredIncomeAssets>',
         context: 'instant_only_previous'
     });
     SKF_LIST.push(array);
