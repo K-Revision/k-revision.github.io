@@ -126,6 +126,86 @@ function applyInArrayTAKS_fields() {
     });
     TAKS_LIST.push(array);
 
+    array = [];
+    array.push('Aðrar rakstrarinntøkur (ið ikki hoyra til primera raksturin)')
+    array.push({
+        id: 'OtherOperatingIncome',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:OtherOperatingIncome unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fsa:OtherOperatingIncome>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'OtherOperatingIncomePrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:OtherOperatingIncome unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fsa:OtherOperatingIncome>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Aðrar rakstrarinntøkur MVG-skyldug')
+    array.push({
+        id: 'OtherOperatingIncomeVATorNot',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:OtherOperatingIncome unitRef="DKK" decimals="0" contextRef="duration_VATApplicableNotApplicableDimension_fo-tax_VATApplicable_only">',
+        contentend: '</fsa:OtherOperatingIncome>',
+        context: 'duration_VATApplicableNotApplicableDimension_fo-tax_VATApplicable_only'
+    });
+    array.push({
+        id: 'OtherOperatingIncomeVATorNotPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:OtherOperatingIncome unitRef="DKK" decimals="0" contextRef="duration_VATApplicableNotApplicableDimension_fo-tax_VATApplicable_only_previous">',
+        contentend: '</fsa:OtherOperatingIncome>',
+        context: 'duration_VATApplicableNotApplicableDimension_fo-tax_VATApplicable_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Aðrar rakstrarinntøkur fevnd av § 12 í MVG lógini (ikki avgjaldsskyldug søla)')
+    array.push({
+        id: 'OtherOperatingIncomeVATorNotGoods',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:OtherOperatingIncome unitRef="DKK" decimals="0" contextRef="duration_VATApplicableNotApplicableDimension_fo-tax_VATNotApplicableGoods_only">',
+        contentend: '</fsa:OtherOperatingIncome>',
+        context: 'duration_VATApplicableNotApplicableDimension_fo-tax_VATNotApplicableGoods_only'
+    });
+    array.push({
+        id: 'OtherOperatingIncomeVATorNotGoodsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:OtherOperatingIncome unitRef="DKK" decimals="0" contextRef="duration_VATApplicableNotApplicableDimension_fo-tax_VATNotApplicableGoods_only_previous">',
+        contentend: '</fsa:OtherOperatingIncome>',
+        context: 'duration_VATApplicableNotApplicableDimension_fo-tax_VATNotApplicableGoods_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Aðrar rakstrarinntøkur fevnd av § 2 stk. 3 í MVG lógini (tænastur undantiknar avgjaldsskyldu)')
+    array.push({
+        id: 'OtherOperatingIncomeVATorNotServices',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:OtherOperatingIncome unitRef="DKK" decimals="0" contextRef="duration_VATApplicableNotApplicableDimension_fo-tax_VATNotApplicableServices_only">',
+        contentend: '</fsa:OtherOperatingIncome>',
+        context: 'duration_VATApplicableNotApplicableDimension_fo-tax_VATNotApplicableServices_only'
+    });
+    array.push({
+        id: 'OtherOperatingIncomeVATorNotServicesPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:OtherOperatingIncome unitRef="DKK" decimals="0" contextRef="duration_VATApplicableNotApplicableDimension_fo-tax_VATNotApplicableServices_only_previous">',
+        contentend: '</fsa:OtherOperatingIncome>',
+        context: 'duration_VATApplicableNotApplicableDimension_fo-tax_VATNotApplicableServices_only_previous'
+    });
+    TAKS_LIST.push(array);
+
     //UTTANHÝSIS KOSTNAðUR		
 
     array = [];
