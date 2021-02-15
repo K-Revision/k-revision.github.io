@@ -807,6 +807,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Skattligar avskrivingar av innrætting av leigaðum hølum')
+    array.push({
+        id: 'DepreciationOfFixtureAndFittingsInRentedAccommodation',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:DepreciationOfFixtureAndFittingsInRentedAccommodation unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:DepreciationOfFixtureAndFittingsInRentedAccommodation>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'DepreciationOfFixtureAndFittingsInRentedAccommodationPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:DepreciationOfFixtureAndFittingsInRentedAccommodation unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:DepreciationOfFixtureAndFittingsInRentedAccommodation>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Skattligar avskrivingar av øðrum bygningum')
     array.push({
         id: 'DepreciationOfOtherCommercialBuildings',
@@ -907,6 +927,86 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     //FÍGGJARSTØÐA		
+
+    array = [];
+    array.push('Skattlig saldo við ársenda (IMMATERIELL STØÐISOGN)')
+    array.push({
+        id: 'FixedAssetsIntangible',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:FixedAssets unitRef="DKK" decimals="0" contextRef="instant_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only">',
+        contentend: '</fo-tax:FixedAssets>',
+        context: 'instant_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only'
+    });
+    array.push({
+        id: 'FixedAssetsIntangiblePrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:FixedAssets unitRef="DKK" decimals="0" contextRef="instant_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only_previous">',
+        contentend: '</fo-tax:FixedAssets>',
+        context: 'instant_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Frágongd í árinum')
+    array.push({
+        id: 'DecreaseInFixedAssetsIntangible',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:DecreaseInFixedAssets unitRef="DKK" decimals="0" contextRef="duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only">',
+        contentend: '</fo-tax:DecreaseInFixedAssets>',
+        context: 'duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only'
+    });
+    array.push({
+        id: 'DecreaseInFixedAssetsIntangiblePrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:DecreaseInFixedAssets unitRef="DKK" decimals="0" contextRef="duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only_previous">',
+        contentend: '</fo-tax:DecreaseInFixedAssets>',
+        context: 'duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Tilgongd í árinum')
+    array.push({
+        id: 'IncreaseInFixedAssetsIntangible',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:IncreaseInFixedAssets unitRef="DKK" decimals="0" contextRef="duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only">',
+        contentend: '</fo-tax:IncreaseInFixedAssets>',
+        context: 'duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only'
+    });
+    array.push({
+        id: 'IncreaseInFixedAssetsIntangiblePrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:IncreaseInFixedAssets unitRef="DKK" decimals="0" contextRef="duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only_previous">',
+        contentend: '</fo-tax:IncreaseInFixedAssets>',
+        context: 'duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Avskrivað í árinum')
+    array.push({
+        id: 'TaxDepreciationOfFixedAssetsIntangible',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:TaxDepreciationOfFixedAssets unitRef="DKK" decimals="0" contextRef="duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only">',
+        contentend: '</fo-tax:TaxDepreciationOfFixedAssets>',
+        context: 'duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only'
+    });
+    array.push({
+        id: 'TaxDepreciationOfFixedAssetsIntangiblePrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:TaxDepreciationOfFixedAssets unitRef="DKK" decimals="0" contextRef="duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only_previous">',
+        contentend: '</fo-tax:TaxDepreciationOfFixedAssets>',
+        context: 'duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only_previous'
+    });
+    TAKS_LIST.push(array);
 
     array = [];
     array.push('Skattlig saldo við ársenda fyri rakstrartól sambært kap. 1 í avskrivingarlógini')
@@ -1374,6 +1474,26 @@ function applyInArrayTAKS_CONTEXT_fields() {
     TAKS_LIST_CONTEXT.push({
         id: 'duration_WagesSalariesVATNumberDimension_fo-tax_VATNumber_only_previous',
         content: '<xbrli:context id="duration_WagesSalariesVATNumberDimension_fo-tax_VATNumber_only_previous"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>' + firstDateLastYear + '</xbrli:startDate><xbrli:endDate>' + lastDateLastYear + '</xbrli:endDate></xbrli:period><xbrli:scenario><xbrldi:typedMember dimension="fo-tax:WagesSalariesVATNumberDimension"><fo-tax:VATNumber>' + VATNumberShort + '</fo-tax:VATNumber></xbrldi:typedMember></xbrli:scenario></xbrli:context>'
+    })
+
+    TAKS_LIST_CONTEXT.push({
+        id: 'instant_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only',
+        content: '<xbrli:context id="instant_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:instant>' + lastDateThisYear + '</xbrli:instant></xbrli:period><xbrli:scenario><xbrldi:explicitMember dimension="fo-tax:IntangibleFixedAssetsDimension">fo-tax:CarryingAmount</xbrldi:explicitMember></xbrli:scenario></xbrli:context>'
+    })
+
+    TAKS_LIST_CONTEXT.push({
+        id: 'instant_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only_previous',
+        content: '<xbrli:context id="instant_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only_previous"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:instant>' + lastDateLastYear + '</xbrli:instant></xbrli:period><xbrli:scenario><xbrldi:explicitMember dimension="fo-tax:IntangibleFixedAssetsDimension">fo-tax:CarryingAmount</xbrldi:explicitMember></xbrli:scenario></xbrli:context>'
+    })
+
+    TAKS_LIST_CONTEXT.push({
+        id: 'duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only',
+        content: '<xbrli:context id="duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>' + firstDateThisYear + '</xbrli:startDate><xbrli:endDate>' + lastDateThisYear + '</xbrli:endDate></xbrli:period><xbrli:scenario><xbrldi:explicitMember dimension="fo-tax:IntangibleFixedAssetsDimension">fo-tax:CarryingAmount</xbrldi:explicitMember></xbrli:scenario></xbrli:context>'
+    })
+
+    TAKS_LIST_CONTEXT.push({
+        id: 'duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only_previous',
+        content: '<xbrli:context id="duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only_previous"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>' + firstDateLastYear + '</xbrli:startDate><xbrli:endDate>' + lastDateLastYear + '</xbrli:endDate></xbrli:period><xbrli:scenario><xbrldi:explicitMember dimension="fo-tax:IntangibleFixedAssetsDimension">fo-tax:CarryingAmount</xbrldi:explicitMember></xbrli:scenario></xbrli:context>'
     })
 
     TAKS_LIST_CONTEXT.push({

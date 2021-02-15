@@ -430,6 +430,18 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
+    array.push('Immaterielle anlægsaktiver')
+    array.push({
+        id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfIntangibleAssets',
+        name: '',
+        ready: '',
+        content: '<fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfIntangibleAssets contextRef="duration_only">',
+        contentend: '</fsa:DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfIntangibleAssets>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
     array.push('Materielle anlægsaktiver')
     array.push({
         id: 'DescriptionOfMethodsOfRecognitionAndMeasurementBasisOfPropertyPlantAndEquipment',
@@ -752,6 +764,26 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     // Aktiver
+
+    array = [];
+    array.push('Immaterielle anlægsaktiver')
+    array.push({
+        id: 'IntangibleAssets',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:IntangibleAssets contextRef="instant_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:IntangibleAssets>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'IntangibleAssetsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:IntangibleAssets contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:IntangibleAssets>',
+        context: 'instant_only_previous'
+    });
+    SKF_LIST.push(array);
 
     array = [];
     array.push('Bygninger og grunde')
