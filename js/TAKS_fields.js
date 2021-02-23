@@ -469,6 +469,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Staðfest tap uppá skuldarar')
+    array.push({
+        id: 'ConfirmedWriteoffsInRespectOfDebtors',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:ConfirmedWriteoffsInRespectOfDebtors unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:ConfirmedWriteoffsInRespectOfDebtors>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'ConfirmedWriteoffsInRespectOfDebtorsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:ConfirmedWriteoffsInRespectOfDebtors unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:ConfirmedWriteoffsInRespectOfDebtors>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Annar uttanhýsis kostnaður (rest bólkur)')
     array.push({
         id: 'OtherDeductibleExpenses',
