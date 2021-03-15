@@ -249,6 +249,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Keyp av handilsvørum')
+    array.push({
+        id: 'PurchaseOfMerchandise',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:PurchaseOfMerchandise unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:PurchaseOfMerchandise>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'PurchaseOfMerchandisePrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:PurchaseOfMerchandise unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:PurchaseOfMerchandise>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Keyp av rávørum og framleiðslutilfari')
     array.push({
         id: 'PurchaseOfRawMaterialsAndConsumables',
