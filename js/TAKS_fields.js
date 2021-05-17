@@ -3,6 +3,33 @@ let TAKS_LIST_CONTEXT = [];
 
 function applyInArrayTAKS_fields() {
 
+    //INFO
+
+    array = [];
+    array.push('V-tal')
+    array.push({
+        id: 'IdentificationNumberCvrOfReportingEntity',
+        name: '',
+        ready: VATNumber,
+        content: '<gsd:IdentificationNumberCvrOfReportingEntity contextRef="duration_only">',
+        contentend: '</gsd:IdentificationNumberCvrOfReportingEntity>',
+        context: 'duration_only'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Virksomhedsnavn')
+    array.push({
+        id: 'NameOfReportingEntity',
+        name: '',
+        ready: Virkisnavn,
+        content: '<gsd:NameOfReportingEntity contextRef="duration_only">',
+        contentend: '</gsd:NameOfReportingEntity>',
+        context: 'duration_only'
+    });
+    TAKS_LIST.push(array);
+
+
     //RAKSTRARROKNSKAPUR
     //NETTOSØLA		
 
