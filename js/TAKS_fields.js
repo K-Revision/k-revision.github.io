@@ -516,6 +516,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Broyting í avsetingum til skuldarum í ársroknskapinum')
+    array.push({
+        id: 'ChangesInProvisionsForTradeReceivablesInAnnualAccount',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:ChangesInProvisionsForTradeReceivablesInAnnualAccount unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:ChangesInProvisionsForTradeReceivablesInAnnualAccount>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'ChangesInProvisionsForTradeReceivablesInAnnualAccountPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:ChangesInProvisionsForTradeReceivablesInAnnualAccount unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:ChangesInProvisionsForTradeReceivablesInAnnualAccount>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Staðfest tap uppá skuldarar')
     array.push({
         id: 'ConfirmedWriteoffsInRespectOfDebtors',
@@ -909,6 +929,26 @@ function applyInArrayTAKS_fields() {
         ready: '',
         content: '<fo-tax:DepreciationOfOtherCommercialBuildings unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
         contentend: '</fo-tax:DepreciationOfOtherCommercialBuildings>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Afturføring roknskaparligt tap við sølu av immateriellari og materiellari støðisogn')
+    array.push({
+        id: 'AdditionOfLossBySalesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:AdditionOfLossBySalesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:AdditionOfLossBySalesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'AdditionOfLossBySalesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLossPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:AdditionOfLossBySalesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:AdditionOfLossBySalesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss>',
         context: 'duration_only_previous'
     });
     TAKS_LIST.push(array);
@@ -1377,6 +1417,26 @@ function applyInArrayTAKS_fields() {
         ready: '',
         content: '<fo-tax:WagesAndSalariesTaxWithheld unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
         contentend: '</fo-tax:WagesAndSalariesTaxWithheld>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Aðrar lønir/fremmand hjálp')
+    array.push({
+        id: 'OtherWagesAndSalariesNotTaxWithheld',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:OtherWagesAndSalariesNotTaxWithheld unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:OtherWagesAndSalariesNotTaxWithheld>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'OtherWagesAndSalariesNotTaxWithheldPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:OtherWagesAndSalariesNotTaxWithheld unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:OtherWagesAndSalariesNotTaxWithheld>',
         context: 'duration_only_previous'
     });
     TAKS_LIST.push(array);
