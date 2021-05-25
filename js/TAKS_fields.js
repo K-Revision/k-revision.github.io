@@ -974,6 +974,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Skattligur vinningur við sølu av materiellari støðisogn')
+    array.push({
+        id: 'TaxableProfitFromSalesOfTangibleAssets',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:TaxableProfitFromSalesOfTangibleAssets unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:TaxableProfitFromSalesOfTangibleAssets>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'TaxableProfitFromSalesOfTangibleAssetsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:TaxableProfitFromSalesOfTangibleAssets unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:TaxableProfitFromSalesOfTangibleAssets>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Roknskaparlig niðurskriving av skuldarum við ársbyrjan útreiðsluførd')
     array.push({
         id: 'ProvisionsForWriteoffsInRespectOfTradeReceivablesRecognisedInProfitOrLossStart',
@@ -1116,6 +1136,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Afturvunnar avskrivingar')
+    array.push({
+        id: 'RegainedFiscalWriteoffIntangible',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:RegainedFiscalWriteoff unitRef="DKK" decimals="0" contextRef="duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only">',
+        contentend: '</fo-tax:RegainedFiscalWriteoff>',
+        context: 'duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only'
+    });
+    array.push({
+        id: 'RegainedFiscalWriteoffIntangiblePrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:RegainedFiscalWriteoffIntangible unitRef="DKK" decimals="0" contextRef="duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only_previous">',
+        contentend: '</fo-tax:RegainedFiscalWriteoffIntangible>',
+        context: 'duration_IntangibleFixedAssetsDimension_fo-tax_CarryingAmount_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Skattlig saldo við ársenda fyri rakstrartól sambært kap. 1 í avskrivingarlógini')
     array.push({
         id: 'FixedAssets',
@@ -1192,6 +1232,126 @@ function applyInArrayTAKS_fields() {
         content: '<fo-tax:TaxDepreciationOfFixedAssets unitRef="DKK" decimals="0" contextRef="duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only_previous">',
         contentend: '</fo-tax:TaxDepreciationOfFixedAssets>',
         context: 'duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Afturvunnar avskrivingar')
+    array.push({
+        id: 'RegainedFiscalWriteoff',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:RegainedFiscalWriteoff unitRef="DKK" decimals="0" contextRef="duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only">',
+        contentend: '</fo-tax:RegainedFiscalWriteoff>',
+        context: 'duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only'
+    });
+    array.push({
+        id: 'RegainedFiscalWriteoffPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:RegainedFiscalWriteoff unitRef="DKK" decimals="0" contextRef="duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only_previous">',
+        contentend: '</fo-tax:RegainedFiscalWriteoff>',
+        context: 'duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Skattlig saldo við ársenda fyri skip sambært kap. 3 í avskrivingarlógini')
+    array.push({
+        id: 'FixedAssetsChap3',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:FixedAssets unitRef="DKK" decimals="0" contextRef="instant_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only">',
+        contentend: '</fo-tax:FixedAssets>',
+        context: 'instant_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only'
+    });
+    array.push({
+        id: 'FixedAssetsChap3Prev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:FixedAssets unitRef="DKK" decimals="0" contextRef="instant_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only_previous">',
+        contentend: '</fo-tax:FixedAssets>',
+        context: 'instant_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Frágongd í árinum')
+    array.push({
+        id: 'DecreaseInFixedAssetsChap3',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:DecreaseInFixedAssets unitRef="DKK" decimals="0" contextRef="duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only">',
+        contentend: '</fo-tax:DecreaseInFixedAssets>',
+        context: 'duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only'
+    });
+    array.push({
+        id: 'DecreaseInFixedAssetsChap3Prev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:DecreaseInFixedAssets unitRef="DKK" decimals="0" contextRef="duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only_previous">',
+        contentend: '</fo-tax:DecreaseInFixedAssets>',
+        context: 'duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Tilgongd í árinum')
+    array.push({
+        id: 'IncreaseInFixedAssetsChap3',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:IncreaseInFixedAssets unitRef="DKK" decimals="0" contextRef="duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only">',
+        contentend: '</fo-tax:IncreaseInFixedAssets>',
+        context: 'duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only'
+    });
+    array.push({
+        id: 'IncreaseInFixedAssetsChap3Prev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:IncreaseInFixedAssets unitRef="DKK" decimals="0" contextRef="duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only_previous">',
+        contentend: '</fo-tax:IncreaseInFixedAssets>',
+        context: 'duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Avskrivað í árinum')
+    array.push({
+        id: 'TaxDepreciationOfFixedAssetsChap3',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:TaxDepreciationOfFixedAssets unitRef="DKK" decimals="0" contextRef="duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only">',
+        contentend: '</fo-tax:TaxDepreciationOfFixedAssets>',
+        context: 'duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only'
+    });
+    array.push({
+        id: 'TaxDepreciationOfFixedAssetsChap3Prev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:TaxDepreciationOfFixedAssets unitRef="DKK" decimals="0" contextRef="duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only_previous">',
+        contentend: '</fo-tax:TaxDepreciationOfFixedAssets>',
+        context: 'duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Afturvunnar avskrivingar')
+    array.push({
+        id: 'RegainedFiscalWriteoffChap3',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:RegainedFiscalWriteoff unitRef="DKK" decimals="0" contextRef="duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only">',
+        contentend: '</fo-tax:RegainedFiscalWriteoff>',
+        context: 'duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only'
+    });
+    array.push({
+        id: 'RegainedFiscalWriteoffChap3Prev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:RegainedFiscalWriteoff unitRef="DKK" decimals="0" contextRef="duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only_previous">',
+        contentend: '</fo-tax:RegainedFiscalWriteoff>',
+        context: 'duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only_previous'
     });
     TAKS_LIST.push(array);
 
@@ -1641,6 +1801,26 @@ function applyInArrayTAKS_CONTEXT_fields() {
     TAKS_LIST_CONTEXT.push({
         id: 'duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only_previous',
         content: '<xbrli:context id="duration_EquipmentsChapterOneDimension_fo-tax_CarryingAmount_only_previous"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>' + firstDateLastYear + '</xbrli:startDate><xbrli:endDate>' + lastDateLastYear + '</xbrli:endDate></xbrli:period><xbrli:scenario><xbrldi:explicitMember dimension="fo-tax:EquipmentsChapterOneDimension">fo-tax:CarryingAmount</xbrldi:explicitMember></xbrli:scenario></xbrli:context>'
+    })
+
+    TAKS_LIST_CONTEXT.push({
+        id: 'instant_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only',
+        content: '<xbrli:context id="instant_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:instant>' + lastDateThisYear + '</xbrli:instant></xbrli:period><xbrli:scenario><xbrldi:explicitMember dimension="fo-tax:WesselsForCommercialUseChapterThreeDimension">fo-tax:CarryingAmount</xbrldi:explicitMember></xbrli:scenario></xbrli:context>'
+    })
+
+    TAKS_LIST_CONTEXT.push({
+        id: 'instant_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only_previous',
+        content: '<xbrli:context id="instant_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only_previous"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:instant>' + lastDateLastYear + '</xbrli:instant></xbrli:period><xbrli:scenario><xbrldi:explicitMember dimension="fo-tax:WesselsForCommercialUseChapterThreeDimension">fo-tax:CarryingAmount</xbrldi:explicitMember></xbrli:scenario></xbrli:context>'
+    })
+
+    TAKS_LIST_CONTEXT.push({
+        id: 'duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only',
+        content: '<xbrli:context id="duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>' + firstDateThisYear + '</xbrli:startDate><xbrli:endDate>' + lastDateThisYear + '</xbrli:endDate></xbrli:period><xbrli:scenario><xbrldi:explicitMember dimension="fo-tax:WesselsForCommercialUseChapterThreeDimension">fo-tax:CarryingAmount</xbrldi:explicitMember></xbrli:scenario></xbrli:context>'
+    })
+
+    TAKS_LIST_CONTEXT.push({
+        id: 'duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only_previous',
+        content: '<xbrli:context id="duration_WesselsForCommercialUseChapterThreeDimension_fo-tax_CarryingAmount_only_previous"><xbrli:entity><xbrli:identifier scheme="http://www.taks.fo/VATNumber">' + VATNumber + '</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>' + firstDateLastYear + '</xbrli:startDate><xbrli:endDate>' + lastDateLastYear + '</xbrli:endDate></xbrli:period><xbrli:scenario><xbrldi:explicitMember dimension="fo-tax:WesselsForCommercialUseChapterThreeDimension">fo-tax:CarryingAmount</xbrldi:explicitMember></xbrli:scenario></xbrli:context>'
     })
 
     TAKS_LIST_CONTEXT.push({
