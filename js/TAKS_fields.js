@@ -476,6 +476,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Langtíðarleigu og operationel leasing')
+    array.push({
+        id: 'LongTermRentalAndOperationalLeasing',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:LongTermRentalAndOperationalLeasing unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:LongTermRentalAndOperationalLeasing>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'LongTermRentalAndOperationalLeasingPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:LongTermRentalAndOperationalLeasing unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:LongTermRentalAndOperationalLeasing>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Útreiðslur til loyvir, avgjøld o.l. hjá fiskivinnuni')
     array.push({
         id: 'LicenseDuesAndSimilarExpensesForTheFishingIndustry',
@@ -989,6 +1009,26 @@ function applyInArrayTAKS_fields() {
         ready: '',
         content: '<fo-tax:TaxableProfitFromSalesOfTangibleAssets unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
         contentend: '</fo-tax:TaxableProfitFromSalesOfTangibleAssets>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Skattligt tap við sølu av materiellari støðisogn')
+    array.push({
+        id: 'TaxableLossFromSalesOfTangibleAssets',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:TaxableLossFromSalesOfTangibleAssets unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:TaxableLossFromSalesOfTangibleAssets>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'TaxableLossFromSalesOfTangibleAssetsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:TaxableLossFromSalesOfTangibleAssets unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:TaxableLossFromSalesOfTangibleAssets>',
         context: 'duration_only_previous'
     });
     TAKS_LIST.push(array);
