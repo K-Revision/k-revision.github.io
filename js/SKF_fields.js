@@ -728,6 +728,46 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
+    array.push('Ekstraordinære aktiviteter')
+    array.push({
+        id: 'ResultsFromExtraordinaryItems',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:ResultsFromExtraordinaryItems contextRef="duration_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ResultsFromExtraordinaryItems>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'ResultsFromExtraordinaryItemsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:ResultsFromExtraordinaryItems contextRef="duration_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ResultsFromExtraordinaryItems>',
+        context: 'duration_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Ekstraordinært resultat før skat')
+    array.push({
+        id: 'ExtraordinaryProfitLossBeforeTax',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:ExtraordinaryProfitLossBeforeTax contextRef="duration_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ExtraordinaryProfitLossBeforeTax>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'ExtraordinaryProfitLossBeforeTaxPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:ExtraordinaryProfitLossBeforeTax contextRef="duration_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ExtraordinaryProfitLossBeforeTax>',
+        context: 'duration_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
     array.push('Skat af årets resultat')
     array.push({
         id: 'TaxExpense',
@@ -1557,6 +1597,18 @@ function applyInArraySKF_fields() {
         ready: '',
         content: '<fsa:DisclosureOfPropertyPlantAndEquipment contextRef="duration_only">',
         contentend: '</fsa:DisclosureOfPropertyPlantAndEquipment>',
+        context: 'duration_only'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
+    array.push('Note: Ekstraordinære indtægter')
+    array.push({
+        id: 'DisclosureOfExtraordinaryIncome',
+        name: '',
+        ready: '',
+        content: '<fsa:DisclosureOfExtraordinaryIncome contextRef="duration_only">',
+        contentend: '</fsa:DisclosureOfExtraordinaryIncome>',
         context: 'duration_only'
     });
     SKF_LIST.push(array);
