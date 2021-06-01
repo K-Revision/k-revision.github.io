@@ -154,6 +154,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Arbeiði gjørt fyri egna rokning bókað sum ogn')
+    array.push({
+        id: 'WorkPerformedByEntityAndCapitalised',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:WorkPerformedByEntityAndCapitalised unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fsa:WorkPerformedByEntityAndCapitalised>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'WorkPerformedByEntityAndCapitalisedPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:WorkPerformedByEntityAndCapitalised unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fsa:WorkPerformedByEntityAndCapitalised>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Aðrar rakstrarinntøkur (ið ikki hoyra til primera raksturin)')
     array.push({
         id: 'OtherOperatingIncome',
