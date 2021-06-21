@@ -914,6 +914,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Óstaðfestur roknskaparligur vinningur av virðisbrøvum vm. afturførdur')
+    array.push({
+        id: 'SubtractionOfNonConfirmedProfitFromSharesAndBondsRecognisedInProfitOrLoss',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:SubtractionOfNonConfirmedProfitFromSharesAndBondsRecognisedInProfitOrLoss unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:SubtractionOfNonConfirmedProfitFromSharesAndBondsRecognisedInProfitOrLoss>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'SubtractionOfNonConfirmedProfitFromSharesAndBondsRecognisedInProfitOrLossPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:SubtractionOfNonConfirmedProfitFromSharesAndBondsRecognisedInProfitOrLoss unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:SubtractionOfNonConfirmedProfitFromSharesAndBondsRecognisedInProfitOrLoss>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Skattligar avskrivingar av rakstrartólum')
     array.push({
         id: 'DepreciationOfToolsAndEquipment',
@@ -949,6 +969,26 @@ function applyInArrayTAKS_fields() {
         ready: '',
         content: '<fo-tax:DepreciationOfFixtureAndFittingsInRentedAccommodation unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
         contentend: '</fo-tax:DepreciationOfFixtureAndFittingsInRentedAccommodation>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Skattligar avskrivingar av bygningum til handverk og ídnað')
+    array.push({
+        id: 'DepreciationOfBuildingsForIndustryAndTrade',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:DepreciationOfBuildingsForIndustryAndTrade unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:DepreciationOfBuildingsForIndustryAndTrade>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'DepreciationOfBuildingsForIndustryAndTradePrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:DepreciationOfBuildingsForIndustryAndTrade unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:DepreciationOfBuildingsForIndustryAndTrade>',
         context: 'duration_only_previous'
     });
     TAKS_LIST.push(array);
@@ -1491,6 +1531,26 @@ function applyInArrayTAKS_fields() {
         ready: '',
         content: '<fo-tax:TaxDepreciationOfFixedAssets unitRef="DKK" decimals="0" contextRef="duration_PropertyAndPlantsChapterFourDimension_fo-tax_CarryingAmount_only_previous">',
         contentend: '</fo-tax:TaxDepreciationOfFixedAssets>',
+        context: 'duration_PropertyAndPlantsChapterFourDimension_fo-tax_CarryingAmount_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Afturvunnar avskrivingar')
+    array.push({
+        id: 'RegainedFiscalWriteoffChap4',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:RegainedFiscalWriteoff unitRef="DKK" decimals="0" contextRef="duration_PropertyAndPlantsChapterFourDimension_fo-tax_CarryingAmount_only">',
+        contentend: '</fo-tax:RegainedFiscalWriteoff>',
+        context: 'duration_PropertyAndPlantsChapterFourDimension_fo-tax_CarryingAmount_only'
+    });
+    array.push({
+        id: 'RegainedFiscalWriteoffChap4Prev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:RegainedFiscalWriteoff unitRef="DKK" decimals="0" contextRef="duration_PropertyAndPlantsChapterFourDimension_fo-tax_CarryingAmount_only_previous">',
+        contentend: '</fo-tax:RegainedFiscalWriteoff>',
         context: 'duration_PropertyAndPlantsChapterFourDimension_fo-tax_CarryingAmount_only_previous'
     });
     TAKS_LIST.push(array);
