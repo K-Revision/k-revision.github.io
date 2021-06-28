@@ -894,6 +894,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Aðrar varandi reguleringar (ikki skattskyldug inntøka)')
+    array.push({
+        id: 'OtherPermanentAdjustmentsNonTaxableIncome',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:OtherPermanentAdjustmentsNonTaxableIncome unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:OtherPermanentAdjustmentsNonTaxableIncome>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'OtherPermanentAdjustmentsNonTaxableIncomePrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:OtherPermanentAdjustmentsNonTaxableIncome unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:OtherPermanentAdjustmentsNonTaxableIncome>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Av- og niðurskrivingar sambært ársroknskapi')
     array.push({
         id: 'DepreciationAmortisationExpenseInAnnualAccount',
