@@ -874,6 +874,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Ikki frádráttarloyvdur stovningarkostnaður')
+    array.push({
+        id: 'NonDeductableEstablisingExpenses',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:NonDeductableEstablisingExpenses unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:NonDeductableEstablisingExpenses>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'NonDeductableEstablisingExpensesPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:NonDeductableEstablisingExpenses unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:NonDeductableEstablisingExpenses>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Aðrar varandi reguleringar (ikki frádráttarloyvdur kostnaður)')
     array.push({
         id: 'OtherPermanentAdjustmentsNonDeductableExpenses',

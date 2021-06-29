@@ -1050,6 +1050,26 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
+    array.push('Andre kapitalandele')
+    array.push({
+        id: 'ShorttermInvestments',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fsa:ShorttermInvestments contextRef="instant_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ShorttermInvestments>',
+        context: 'instant_only'
+    });
+    array.push({
+        id: 'ShorttermInvestmentsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fsa:ShorttermInvestments contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ShorttermInvestments>',
+        context: 'instant_only_previous'
+    });
+    SKF_LIST.push(array);
+
+    array = [];
     array.push('Skatteaktiv')
     array.push({
         id: 'CurrentDeferredTaxAssets',
