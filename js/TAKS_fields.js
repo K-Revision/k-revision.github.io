@@ -1014,6 +1014,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Skattligar avskrivingar av skipum')
+    array.push({
+        id: 'DepreciationOfCommercialVessels',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:DepreciationOfCommercialVessels unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:DepreciationOfCommercialVessels>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'DepreciationOfCommercialVesselsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:DepreciationOfCommercialVessels unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:DepreciationOfCommercialVessels>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Skattligar avskrivingar av bygningum til handverk og ídnað')
     array.push({
         id: 'DepreciationOfBuildingsForIndustryAndTrade',
