@@ -870,7 +870,7 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
-    array.push('Tekniske anlæg og maskiner')
+    array.push('Tekniske anlæg og maskiner / Plant And Machinery')
     array.push({
         id: 'PlantAndMachinery',
         name: 'Nuværende år',
@@ -890,7 +890,7 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
-    array.push('Driftsmateriel og inventar')
+    array.push('Driftsmateriel og inventar / Property Plant And Equipment')
     array.push({
         id: 'PropertyPlantAndEquipment',
         name: 'Nuværende år',
@@ -910,7 +910,7 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
-    array.push('Andre anlæg, driftsmateriel og inventar')
+    array.push('Andre anlæg, driftsmateriel og inventar / Fixtures Fittings Tools And Equipment')
     array.push({
         id: 'FixturesFittingsToolsAndEquipment',
         name: 'Nuværende år',
@@ -970,7 +970,7 @@ function applyInArraySKF_fields() {
     SKF_LIST.push(array);
 
     array = [];
-    array.push('Råvarer og hjælpematerialer')
+    array.push('Råvarer og hjælpematerialer / Lager / Inventories')
     array.push({
         id: 'Inventories',
         name: 'Nuværende år',
