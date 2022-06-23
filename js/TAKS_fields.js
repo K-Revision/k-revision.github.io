@@ -1074,6 +1074,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Skattligar avskrivingar av immateriellari ogn og goodwill')
+    array.push({
+        id: 'DepreciationOfIntangibleAssetsAndGoodwill',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:DepreciationOfIntangibleAssetsAndGoodwill unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:DepreciationOfIntangibleAssetsAndGoodwill>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'DepreciationOfIntangibleAssetsAndGoodwillPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:DepreciationOfIntangibleAssetsAndGoodwill unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:DepreciationOfIntangibleAssetsAndGoodwill>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Afturføring roknskaparligt tap við sølu av immateriellari og materiellari støðisogn')
     array.push({
         id: 'AdditionOfLossBySalesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss',
