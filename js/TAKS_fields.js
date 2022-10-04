@@ -954,6 +954,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Staðfestur roknskaparligur vinningur av virðisbrøvum vm. afturførdur')
+    array.push({
+        id: 'SubtractionOfConfirmedProfitFromSharesAndBondsRecognisedInProfitOrLoss',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:SubtractionOfConfirmedProfitFromSharesAndBondsRecognisedInProfitOrLoss unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:SubtractionOfConfirmedProfitFromSharesAndBondsRecognisedInProfitOrLoss>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'SubtractionOfConfirmedProfitFromSharesAndBondsRecognisedInProfitOrLossPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:SubtractionOfConfirmedProfitFromSharesAndBondsRecognisedInProfitOrLoss unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:SubtractionOfConfirmedProfitFromSharesAndBondsRecognisedInProfitOrLoss>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Óstaðfestur roknskaparligur vinningur av virðisbrøvum vm. afturførdur')
     array.push({
         id: 'SubtractionOfNonConfirmedProfitFromSharesAndBondsRecognisedInProfitOrLoss',
@@ -969,6 +989,46 @@ function applyInArrayTAKS_fields() {
         ready: '',
         content: '<fo-tax:SubtractionOfNonConfirmedProfitFromSharesAndBondsRecognisedInProfitOrLoss unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
         contentend: '</fo-tax:SubtractionOfNonConfirmedProfitFromSharesAndBondsRecognisedInProfitOrLoss>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Staðfest roknskaparligt tap av virðisbrøvum vm. afturført')
+    array.push({
+        id: 'AdditionOfConfirmedLossFromSharesAndBondsRecognisedInProfitOrLoss',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:AdditionOfConfirmedLossFromSharesAndBondsRecognisedInProfitOrLoss unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:AdditionOfConfirmedLossFromSharesAndBondsRecognisedInProfitOrLoss>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'AdditionOfConfirmedLossFromSharesAndBondsRecognisedInProfitOrLossPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:AdditionOfConfirmedLossFromSharesAndBondsRecognisedInProfitOrLoss unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:AdditionOfConfirmedLossFromSharesAndBondsRecognisedInProfitOrLoss>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
+    array.push('Óstaðfest roknskaparligt tap av virðisbrøvum vm. afturført')
+    array.push({
+        id: 'AdditionOfNonConfirmedLossFromSharesAndBondsRecognisedInProfitOrLoss',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:AdditionOfNonConfirmedLossFromSharesAndBondsRecognisedInProfitOrLoss unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:AdditionOfNonConfirmedLossFromSharesAndBondsRecognisedInProfitOrLoss>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'AdditionOfNonConfirmedLossFromSharesAndBondsRecognisedInProfitOrLossPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:AdditionOfNonConfirmedLossFromSharesAndBondsRecognisedInProfitOrLoss unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:AdditionOfNonConfirmedLossFromSharesAndBondsRecognisedInProfitOrLoss>',
         context: 'duration_only_previous'
     });
     TAKS_LIST.push(array);
