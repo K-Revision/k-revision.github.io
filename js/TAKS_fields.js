@@ -1074,6 +1074,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Skattligar avskrivingar persónbilum')
+    array.push({
+        id: 'DepreciationOfPassengerCars',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:DepreciationOfPassengerCars unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:DepreciationOfPassengerCars>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'DepreciationOfPassengerCarsPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:DepreciationOfPassengerCars unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:DepreciationOfPassengerCars>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Skattligar avskrivingar av innrætting av leigaðum hølum')
     array.push({
         id: 'DepreciationOfFixtureAndFittingsInRentedAccommodation',
