@@ -854,6 +854,26 @@ function applyInArrayTAKS_fields() {
     TAKS_LIST.push(array);
 
     array = [];
+    array.push('Ikki frádráttarloyvdar rentur')
+    array.push({
+        id: 'NonDeductableInterest',
+        name: 'Nuværende år',
+        ready: '',
+        content: '<fo-tax:NonDeductableInterest unitRef="DKK" decimals="0" contextRef="duration_only">',
+        contentend: '</fo-tax:NonDeductableInterest>',
+        context: 'duration_only'
+    });
+    array.push({
+        id: 'NonDeductableInterestPrev',
+        name: 'Sidste år',
+        ready: '',
+        content: '<fo-tax:NonDeductableInterest unitRef="DKK" decimals="0" contextRef="duration_only_previous">',
+        contentend: '</fo-tax:NonDeductableInterest>',
+        context: 'duration_only_previous'
+    });
+    TAKS_LIST.push(array);
+
+    array = [];
     array.push('Ikki frádráttarloyvdar gávur og stuðul')
     array.push({
         id: 'NonDeductableGiftsAndSubsidies',
