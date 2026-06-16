@@ -1092,19 +1092,19 @@ function applyInArraySKF_fields() {
     array = [];
     array.push('Tilgodehavende hos selskabsdeltager og ledelse')
     array.push({
-        id: 'PayablesToShareholdersAndManagement',
+        id: 'ShorttermReceivablesFromOwnersAndManagement',
         name: 'Nuværende år',
         ready: '',
-        content: '<fsa:PayablesToShareholdersAndManagement contextRef="instant_only" unitRef="DKK" decimals="0">',
-        contentend: '</fsa:PayablesToShareholdersAndManagement>',
+        content: '<fsa:ShorttermReceivablesFromOwnersAndManagement contextRef="instant_only" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ShorttermReceivablesFromOwnersAndManagement>',
         context: 'instant_only'
     });
     array.push({
-        id: 'PayablesToShareholdersAndManagementPrev',
+        id: 'ShorttermReceivablesFromOwnersAndManagementPrev',
         name: 'Sidste år',
         ready: '',
-        content: '<fsa:PayablesToShareholdersAndManagement contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
-        contentend: '</fsa:PayablesToShareholdersAndManagement>',
+        content: '<fsa:ShorttermReceivablesFromOwnersAndManagement contextRef="instant_only_previous" unitRef="DKK" decimals="0">',
+        contentend: '</fsa:ShorttermReceivablesFromOwnersAndManagement>',
         context: 'instant_only_previous'
     });
     SKF_LIST.push(array);
